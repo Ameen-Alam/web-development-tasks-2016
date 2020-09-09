@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/boot.css" type="text/css">
+    
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyACqrsKQP6UG1TFoIFhXL06ub0hGWfbsrY",
+    authDomain: "sample-a9aaf.firebaseapp.com",
+    databaseURL: "https://sample-a9aaf.firebaseio.com",
+    projectId: "sample-a9aaf",
+    storageBucket: "sample-a9aaf.appspot.com",
+    messagingSenderId: "207859447681"
+  };
+  firebase.initializeApp(config);
+</script>
+    <title>LoginToSheikh</title>
+    <link rel="stylesheet" href="custom.css" type="text/css">
+    <!-- Bootstrap CSS -->
+</head>
+
+<body>
+    <div class="container box" style="margin:70px  auto;">
+
+        <div class="row">
+            <div class="col-sm-3 box11"></div>
+            <div class="col-sm-6 box1">
+                <div class="">
+                    <a href="#"><img src="images/google.png" class="img-responsive" width="80px;" alt=""></a>
+                    <h3 class="">Sign in </h3> <p class="text-muted">with Sheikh Google</p>
+
+                    <div class="form-group">
+                        <label for="email">Email or phone</label>
+                        <input type="text" id="email" class="form-control" placeholder="Enter your Email or Phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Enter your Password">
+                    </div>
+
+                    <div class="form-group">
+                    <label class="mr-sm-2" for="inlineFormCustomSelectPref">More Option..</label>
+                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelectPref">
+                        <option selected>sign in with</option>
+                        <option value="1"><img src="" alt="">Google</option>
+                        <option value="2"><img src="" alt="">Facebook</option>
+                        <option value="3"><img src="" alt="">Linkdlin</option>
+                    </select>
+                    </div>
+                    <div class="row">
+                    <div class="form-group col-sm-5">
+                    <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                        <input type="checkbox" class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                        <small class="custom-control-description text-muted">Check me out</small>
+                    </label>
+                    </div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-3 justify-content-end">
+                        <button type="next" id="login" onclick="login();" class="btn btn-info" style="width:100%;"> Sign In </button>
+                    </div>
+                    </div>
+                    <label for="">
+                    <a href="index.html">Create a new Account...</a></label>
+                    <a href="home.html">HOME</a>
+                </div>
+            </div>
+            <div class="col-sm-3 box11"></div>
+        </div>
+    </div>
+
+    
+    <!-- HTML Cooding end -->
+    <!-- JS  -->
+    <script src="app.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="lib/jquery.js"></script>
+    <script src="lib/pooper.js"></script>
+    <script src="lib/boot.js"></script>
+    <!-- End Body-->
+</body>
+</html>

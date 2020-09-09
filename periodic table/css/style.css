@@ -1,0 +1,71 @@
+body{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:100%;
+
+}
+table{
+    padding-top: 130px;
+    padding-left: 55px;
+    margin: inherit;
+}
+.blank  {
+
+}
+.hydrogen {
+    background-color: #00b6bc;
+}
+.helium, .neon, .ar, .kr, .xe, .rn{
+    background-color: #338f90;
+}
+.lithium, .na, .k, .rb, .cs, .fr{
+    background-color: #1b67c9;
+}
+.carbon,.nitrogen, .oxygen, .p, .s, .se{
+    background-color: #00b6bc;
+}
+.berilium, .mg, .ca, .sr, .ba, .ra{
+    background-color: #a1669e;
+}
+.sc, .y, .tione, .zr, .hf, .rf, .v, .nb, .ta, .db, .cr, .mo, .w, .sg, .mn, .tc, .re, .bh,
+.fe, .ru, .os, .hs, .co, .rh, .ir, .mt, .ni, .pd, .pt, .ds, .cu, .ag, .au, .rg, .zn, .cd,
+.hg, .cn{
+    background-color: #f53951;
+}
+.actinides, .lanthanides, .colone, .coltwo, .colthree, .colfour, .colfive, .colsix, .colseven,
+.rowone, .rowtwo, .rowthree, .rowfour, .rowfive, .rowsix, .rowseven, .roweight, .rownine, .rowten,
+.rowelevene, .rowtwelve, .rowthirteen, .rowfourteen, .rowfifteen, .rowsixteen, .rowseventeen, .roweighteen{
+ opacity: 0.8;
+ font-family: monospace; }
+ .al, .ga, .in, .ti, .bi, .pb, .sn{
+     background-color: rgb(229,110,68);
+ }
+ .boron, .si, .ge, .as, .sb, .te, .po {
+     background-color: rgb(240,177,74);
+ }
+ .felorine, .cl, .br, .i, .at{
+     background-color:rgb(91,205,109) ;
+ }
+.nh, .fi, .mc, .lv, .ts, .og{
+     background-color: rgb(129,147,147);
+ }
+ .sixstar, .la, .ce, .pr, .nd, .pm, .sm, .eu, .gd, .tb, .dy, .ho, .er, .tm, .yd, .lu{
+     background-color: rgb(5,72,114)
+ } 
+.sevenstar, .ac, .th, .pa, .u, .np, .pu, .am, .cm, .bk, .cf, .es, .fm, .md, .no, .lr{
+    background-color:rgb(85,45,82) ;
+ }
+ td{padding: 6px; 
+ width: 35px; 
+ height: 35px;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ animation-direction: alternate;
+  }
+ sup {
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-size: 70%; 
+     opacity: 0.8;
+ }
+ table{
+
+ }

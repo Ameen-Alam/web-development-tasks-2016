@@ -1,0 +1,158 @@
+::selection {
+    background-color: #b5e2e7;
+  }
+  
+  ::-moz-selection {
+    background-color: #8ac7d8;
+  }
+  
+  body {
+    background-image: url("https://case.edu/events/media/caseedu/events/images/Calendar-2152x1413.jpg");
+    background-repeat: repeat;
+    background-size: 110%;
+    background-attachment: fixed; 
+  }
+  
+  .container {
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+  }
+  
+  #logbox {
+    padding: 10px;
+    margin: 50px auto;
+    width: 340px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 175%;
+    color: #757575;
+    font-weight: 300;
+  }
+  
+  h1, input {
+    font-family: "Open Sans", Helvetica, sans-serif;
+  }
+  
+  .input {
+    width: 75%;
+    height: 50px;
+    display: block;
+    margin: 0 auto 15px;
+    padding: 0 15px;
+    border: none;
+    border-bottom: 2px solid #ebebeb;
+  }
+  .input:focus {
+    outline: none;
+    border-bottom-color: #3CC !important;
+  }
+  .input:hover {
+    border-bottom-color: #dcdcdc;
+  }
+  .input:invalid {
+    box-shadow: none;
+  }
+  
+  .pass:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+  }
+  
+  .inputButton {
+    position: relative;
+    width: 85%;
+    height: 50px;
+    display: block;
+    margin: 30px auto 30px;
+    color: white;
+    background-color: #3CC;
+    border: none;
+    -webkit-box-shadow: 0 5px 0 #1CE2E2;
+    -moz-box-shadow: 0 5px 0 #1CE2E2;
+    box-shadow: 0 5px 0 #1CE2E2;
+  }
+  .inputButton:hover {
+    top: 2px;
+    -webkit-box-shadow: 0 3px 0 #1CE2E2;
+    -moz-box-shadow: 0 3px 0 #1CE2E2;
+    box-shadow: 0 3px 0 #1CE2E2;
+  }
+  .inputButton:active {
+    top: 5px;
+    box-shadow: none;
+  }
+  .inputButton:focus {
+    outline: none;
+  }
+  
+
+
+
+
+  .sing_up{
+    margin-top: 100px; 
+    margin-bottom: -20px;
+    color: #757575;
+  }
+
+
+
+
+  .log_in{
+    margin-top: 150px; 
+    margin-bottom: -20px;
+    color: #757575;
+  }
+
+
+  .create_account_button{
+    position: relative;
+    width: 85%;
+    height: 50px;
+    display: block;
+    margin: 30px auto 30px;
+    color: white;
+    background-color: #139975;
+    border: none;
+    -webkit-box-shadow: 0 5px 0 #13BD90;
+    -moz-box-shadow: 0 5px 0 #13BD90;
+    box-shadow: 0 5px 0 #13BD90;
+
+  }
+   .create_account_button:hover {
+    top: 2px;
+    -webkit-box-shadow: 0 3px 0  #13BD90;
+    -moz-box-shadow: 0 3px 0  #13BD90;
+    box-shadow: 0 3px 0  #13BD90;
+  }
+  .create_account_button:active{
+    top: 5px;
+    box-shadow: none;
+  }
+
+  .create_account_button:focus {
+    outline: none;
+  }
+  
+  .nave_style{
+    background-color: #171F1F;
+    width: 110%;
+    height: 95px;
+    border-bottom:  5px solid #4186ED;
+    opacity: 0.8;
+    position: fixed;
+}  
+
+
+.meet_up_headding{
+   color: #fff;  
+   margin-top: 30px;
+   margin-left: -350px;
+   
+}

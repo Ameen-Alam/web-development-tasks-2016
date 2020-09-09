@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="navbar-top-fixed.css" rel="stylesheet">
+    <link rel="icon" href="../Icons/Meet-Up Planner Icon.png">
+    <title>My Events</title>
+</head>
+<body>
+    
+    
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="../All Events/index.html">Meet-Up Event Planner</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="../All Events/index.html">All Events <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../My Events/index.html">My Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../Going Events/index.html">Going Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../Not Going Events/index.html">Not Going Events</a>
+            </li>
+            </ul>
+            <form action="../Create Event/index.html" class="form-inline mt-2 mt-md-0">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Create New Event</button>
+            </form>
+            &nbsp;
+            <form action="JavaScript:void(0)" class="form-inline mt-2 mt-md-0">
+              <button class="btn btn-outline-danger my-2 my-sm-0" onClick="signout();">Logout</button>
+            </form>
+        </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col text-center" id="events-list">
+
+                    <!-- <div class="jumbotron" id="">
+                        <h3 class="display-5">Event Name</h3>
+                        <p class="lead"><strong>Event Description:</strong> This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                        <p class="lead"><strong>Event Location:</strong> This is a simple hero</p>
+                        <p class="lead"><strong>Event Starting Date:</strong> This is a simple her</p>
+                        <p class="lead"><strong>Event Ending Date:</strong> This is a simple</p>
+                        <p class="lead"><strong>Event Organizer:</strong> This is a simple her</p>
+                        <hr class="my-4">
+                        <p class="lead">
+                            <button class="btn btn-primary">
+                                Going To Event <span class="badge badge-info">4</span>
+                            </button>
+                            <button class="btn btn-warning">
+                                    Not Going To Event <span class="badge badge-info">4</span>
+                            </button>
+                        </p>
+                    </div> -->
+
+
+                </div>
+            </div>
+        </div>
+
+
+    
+    <script src="../Bootstrap/jquery-3.2.1.slim.min.js"></script>
+    <script src="../Bootstrap/popper.min.js"></script>
+    <script src="../Bootstrap/bootstrap.min.js"></script>
+</body>
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC5nvczDBJ900WpjicsqTMuRzY2iZ15zbg",
+    authDomain: "raisersbuilders.firebaseapp.com",
+    databaseURL: "https://raisersbuilders.firebaseio.com",
+    projectId: "raisersbuilders",
+    storageBucket: "raisersbuilders.appspot.com",
+    messagingSenderId: "319373610910"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="../main_code.js"></script>
+<script src="my_events.js"></script>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ElementsTable</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body class="casual-font">
+<div class="body-div-640-1000">
+  <header>
+    <div class="center">
+      <a href="index.html"><img alt="elements.wlonk.com" src="images/elements_wlonk.png"></a>
+    </div>
+    <!-- InstanceBeginEditable name="header_1" --> <!-- InstanceEndEditable -->
+	
+    <nav>
+      <div class="navbar center">
+        <ul>
+          <li><a href="index.html">Home/Printables</a></li>
+          <li><a href="ElementsTable.html">Interactive</a></li>
+          <li><a href="ElementUses.html">Uses</a></li>
+          <li><a href="ElementsLinks.html">Links</a></li>
+          <li><a href="ElementsBuy.html">Buy</a></li>
+          <li><a href="ElementsDonate.html">Donate</a></li>
+          <li><a href="ElementsPrintingTips.html">Printing Tips</a></li>
+          <li><a href="ElementsTermsOfUse.html">Terms of Use</a></li>
+          <li><a href="ElementsContact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+	<!-- InstanceBeginEditable name="header_2" --> <!-- InstanceEndEditable -->
+  </header>
+  <!-- InstanceBeginEditable name="main" -->
+  <main>
+    <div id="elementsContainer">
+      <img id="elementsImg" usemap="#elementsMap" src="images/Elements_Pics_Clickable_w1000.png" alt="" class="resizable" style="border:none;">
+      <!--<div id="keyBox1" class="keyBox">
+        <img id="keyImg1" class="keyImg" src="images/elems_key/elements_box_key.png" alt="" title="" onclick="javascript:showPopup(this.src, false);">
+      </div>
+      <div id="keyBox2" class="keyBox">
+        <img id="keyImg2" class="keyImg" src="images/elems_key/elements_symbol_key.png" alt="" title="" onclick="javascript:showPopup(this.src, false);">
+      </div>
+      <div id="keyBox3" class="keyBox">
+        <img id="keyImg3" class="keyImg" src="images/elems_key/elements_color_key_horiz.png" alt="" title="" onclick="javascript:showPopup(this.src, true);">
+      </div>
+      <div id="popupBox1" class="popupBox">
+        <img id="popupImg1" class="popupImg" src="" onclick="javascript:hidePopup();" alt="" title="">
+      </div>
+      <div id="auxBox1" class="auxBox">
+        <a href="javascript:showKey();">Key</a>
+      </div>
+      <div id="auxBox2" class="auxBox">
+        <a href="javascript:showInfoBox();">Info</a>
+      </div>
+      <div id="auxBox3" class="auxBox">
+        Click it!
+      </div>
+    </div>-->
+    <!--<map id="elementsMap" name="elementsMap">
+      <area id="1" shape="rect" coords="0,23.703703703703702,35.55555555555556,71.11111111111111" href="javascript:showElem(1);" alt="Hydrogen" title="">
+      <area id="2" shape="rect" coords="604.4444444444445,23.703703703703702,640,71.11111111111111" href="javascript:showElem(2);" alt="Helium" title="">
+      <area id="3" shape="rect" coords="0,71.11111111111111,35.55555555555556,118.51851851851852" href="javascript:showElem(3);" alt="Lithium" title="">
+      <area id="4" shape="rect" coords="35.55555555555556,71.11111111111111,71.11111111111111,118.51851851851852" href="javascript:showElem(4);" alt="Beryllium" title="">
+      <area id="5" shape="rect" coords="426.6666666666667,71.11111111111111,462.22222222222223,118.51851851851852" href="javascript:showElem(5);" alt="Boron" title="">
+      <area id="6" shape="rect" coords="462.22222222222223,71.11111111111111,497.77777777777777,118.51851851851852" href="javascript:showElem(6);" alt="Carbon" title="">
+      <area id="7" shape="rect" coords="497.7777777777778,71.11111111111111,533.3333333333334,118.51851851851852" href="javascript:showElem(7);" alt="Nitrogen" title="">
+      <area id="8" shape="rect" coords="533.3333333333334,71.11111111111111,568.8888888888889,118.51851851851852" href="javascript:showElem(8);" alt="Oxygen" title="">
+      <area id="9" shape="rect" coords="568.8888888888889,71.11111111111111,604.4444444444445,118.51851851851852" href="javascript:showElem(9);" alt="Fluorine" title="">
+      <area id="10" shape="rect" coords="604.4444444444445,71.11111111111111,640,118.51851851851852" href="javascript:showElem(10);" alt="Neon" title="">
+      <area id="11" shape="rect" coords="0,118.5185185185185,35.55555555555556,165.92592592592592" href="javascript:showElem(11);" alt="Sodium" title="">
+      <area id="12" shape="rect" coords="35.55555555555556,118.5185185185185,71.11111111111111,165.92592592592592" href="javascript:showElem(12);" alt="Magnesium" title="">
+      <area id="13" shape="rect" coords="426.6666666666667,118.5185185185185,462.22222222222223,165.92592592592592" href="javascript:showElem(13);" alt="Aluminum" title="">
+      <area id="14" shape="rect" coords="462.22222222222223,118.5185185185185,497.77777777777777,165.92592592592592" href="javascript:showElem(14);" alt="Silicon" title="">
+      <area id="15" shape="rect" coords="497.7777777777778,118.5185185185185,533.3333333333334,165.92592592592592" href="javascript:showElem(15);" alt="Phosphorus" title="">
+      <area id="16" shape="rect" coords="533.3333333333334,118.5185185185185,568.8888888888889,165.92592592592592" href="javascript:showElem(16);" alt="Sulfur" title="">
+      <area id="17" shape="rect" coords="568.8888888888889,118.5185185185185,604.4444444444445,165.92592592592592" href="javascript:showElem(17);" alt="Chlorine" title="">
+      <area id="18" shape="rect" coords="604.4444444444445,118.5185185185185,640,165.92592592592592" href="javascript:showElem(18);" alt="Argon" title="">
+      <area id="19" shape="rect" coords="0,165.92592592592592,35.55555555555556,213.33333333333331" href="javascript:showElem(19);" alt="Potassium" title="">
+      <area id="20" shape="rect" coords="35.55555555555556,165.92592592592592,71.11111111111111,213.33333333333331" href="javascript:showElem(20);" alt="Calcium" title="">
+      <area id="21" shape="rect" coords="71.11111111111111,165.92592592592592,106.66666666666667,213.33333333333331" href="javascript:showElem(21);" alt="Scandium" title="">
+      <area id="22" shape="rect" coords="106.66666666666667,165.92592592592592,142.22222222222223,213.33333333333331" href="javascript:showElem(22);" alt="Titanium" title="">
+      <area id="23" shape="rect" coords="142.22222222222223,165.92592592592592,177.77777777777777,213.33333333333331" href="javascript:showElem(23);" alt="Vanadium" title="">
+      <area id="24" shape="rect" coords="177.77777777777777,165.92592592592592,213.33333333333331,213.33333333333331" href="javascript:showElem(24);" alt="Chromium" title="">
+      <area id="25" shape="rect" coords="213.33333333333334,165.92592592592592,248.8888888888889,213.33333333333331" href="javascript:showElem(25);" alt="Manganese" title="">
+      <area id="26" shape="rect" coords="248.8888888888889,165.92592592592592,284.44444444444446,213.33333333333331" href="javascript:showElem(26);" alt="Iron" title="">
+      <area id="27" shape="rect" coords="284.44444444444446,165.92592592592592,320,213.33333333333331" href="javascript:showElem(27);" alt="Cobalt" title="">
+      <area id="28" shape="rect" coords="320,165.92592592592592,355.55555555555554,213.33333333333331" href="javascript:showElem(28);" alt="Nickel" title="">
+      <area id="29" shape="rect" coords="355.55555555555554,165.92592592592592,391.1111111111111,213.33333333333331" href="javascript:showElem(29);" alt="Copper" title="">
+      <area id="30" shape="rect" coords="391.11111111111114,165.92592592592592,426.6666666666667,213.33333333333331" href="javascript:showElem(30);" alt="Zinc" title="">
+      <area id="31" shape="rect" coords="426.6666666666667,165.92592592592592,462.22222222222223,213.33333333333331" href="javascript:showElem(31);" alt="Gallium" title="">
+      <area id="32" shape="rect" coords="462.22222222222223,165.92592592592592,497.77777777777777,213.33333333333331" href="javascript:showElem(32);" alt="Germanium" title="">
+      <area id="33" shape="rect" coords="497.7777777777778,165.92592592592592,533.3333333333334,213.33333333333331" href="javascript:showElem(33);" alt="Arsenic" title="">
+      <area id="34" shape="rect" coords="533.3333333333334,165.92592592592592,568.8888888888889,213.33333333333331" href="javascript:showElem(34);" alt="Selenium" title="">
+      <area id="35" shape="rect" coords="568.8888888888889,165.92592592592592,604.4444444444445,213.33333333333331" href="javascript:showElem(35);" alt="Bromine" title="">
+      <area id="36" shape="rect" coords="604.4444444444445,165.92592592592592,640,213.33333333333331" href="javascript:showElem(36);" alt="Krypton" title="">
+      <area id="37" shape="rect" coords="0,213.33333333333331,35.55555555555556,260.7407407407407" href="javascript:showElem(37);" alt="Rubidium" title="">
+      <area id="38" shape="rect" coords="35.55555555555556,213.33333333333331,71.11111111111111,260.7407407407407" href="javascript:showElem(38);" alt="Strontium" title="">
+      <area id="39" shape="rect" coords="71.11111111111111,213.33333333333331,106.66666666666667,260.7407407407407" href="javascript:showElem(39);" alt="Yttrium" title="">
+      <area id="40" shape="rect" coords="106.66666666666667,213.33333333333331,142.22222222222223,260.7407407407407" href="javascript:showElem(40);" alt="Zirconium" title="">
+      <area id="41" shape="rect" coords="142.22222222222223,213.33333333333331,177.77777777777777,260.7407407407407" href="javascript:showElem(41);" alt="Niobium" title="">
+      <area id="42" shape="rect" coords="177.77777777777777,213.33333333333331,213.33333333333331,260.7407407407407" href="javascript:showElem(42);" alt="Molybdenum" title="">
+      <area id="43" shape="rect" coords="213.33333333333334,213.33333333333331,248.8888888888889,260.7407407407407" href="javascript:showElem(43);" alt="Technetium" title="">
+      <area id="44" shape="rect" coords="248.8888888888889,213.33333333333331,284.44444444444446,260.7407407407407" href="javascript:showElem(44);" alt="Ruthenium" title="">
+      <area id="45" shape="rect" coords="284.44444444444446,213.33333333333331,320,260.7407407407407" href="javascript:showElem(45);" alt="Rhodium" title="">
+      <area id="46" shape="rect" coords="320,213.33333333333331,355.55555555555554,260.7407407407407" href="javascript:showElem(46);" alt="Palladium" title="">
+      <area id="47" shape="rect" coords="355.55555555555554,213.33333333333331,391.1111111111111,260.7407407407407" href="javascript:showElem(47);" alt="Silver" title="">
+      <area id="48" shape="rect" coords="391.11111111111114,213.33333333333331,426.6666666666667,260.7407407407407" href="javascript:showElem(48);" alt="Cadmium" title="">
+      <area id="49" shape="rect" coords="426.6666666666667,213.33333333333331,462.22222222222223,260.7407407407407" href="javascript:showElem(49);" alt="Indium" title="">
+      <area id="50" shape="rect" coords="462.22222222222223,213.33333333333331,497.77777777777777,260.7407407407407" href="javascript:showElem(50);" alt="Tin" title="">
+      <area id="51" shape="rect" coords="497.7777777777778,213.33333333333331,533.3333333333334,260.7407407407407" href="javascript:showElem(51);" alt="Antimony" title="">
+      <area id="52" shape="rect" coords="533.3333333333334,213.33333333333331,568.8888888888889,260.7407407407407" href="javascript:showElem(52);" alt="Tellurium" title="">
+      <area id="53" shape="rect" coords="568.8888888888889,213.33333333333331,604.4444444444445,260.7407407407407" href="javascript:showElem(53);" alt="Iodine" title="">
+      <area id="54" shape="rect" coords="604.4444444444445,213.33333333333331,640,260.7407407407407" href="javascript:showElem(54);" alt="Xenon" title="">
+      <area id="55" shape="rect" coords="0,260.7407407407407,35.55555555555556,308.1481481481481" href="javascript:showElem(55);" alt="Cesium" title="">
+      <area id="56" shape="rect" coords="35.55555555555556,260.7407407407407,71.11111111111111,308.1481481481481" href="javascript:showElem(56);" alt="Barium" title="">
+      <area id="57" shape="rect" coords="106.66666666666667,361.48148148148147,142.22222222222223,408.88888888888886" href="javascript:showElem(57);" alt="Lanthanum" title="">
+      <area id="58" shape="rect" coords="142.22222222222223,361.48148148148147,177.77777777777777,408.88888888888886" href="javascript:showElem(58);" alt="Cerium" title="">
+      <area id="59" shape="rect" coords="177.77777777777777,361.48148148148147,213.33333333333331,408.88888888888886" href="javascript:showElem(59);" alt="Praseodymium" title="">
+      <area id="60" shape="rect" coords="213.33333333333334,361.48148148148147,248.8888888888889,408.88888888888886" href="javascript:showElem(60);" alt="Neodymium" title="">
+      <area id="61" shape="rect" coords="248.8888888888889,361.48148148148147,284.44444444444446,408.88888888888886" href="javascript:showElem(61);" alt="Promethium" title="">
+      <area id="62" shape="rect" coords="284.44444444444446,361.48148148148147,320,408.88888888888886" href="javascript:showElem(62);" alt="Samarium" title="">
+      <area id="63" shape="rect" coords="320,361.48148148148147,355.55555555555554,408.88888888888886" href="javascript:showElem(63);" alt="Europium" title="">
+      <area id="64" shape="rect" coords="355.55555555555554,361.48148148148147,391.1111111111111,408.88888888888886" href="javascript:showElem(64);" alt="Gadolinium" title="">
+      <area id="65" shape="rect" coords="391.11111111111114,361.48148148148147,426.6666666666667,408.88888888888886" href="javascript:showElem(65);" alt="Terbium" title="">
+      <area id="66" shape="rect" coords="426.6666666666667,361.48148148148147,462.22222222222223,408.88888888888886" href="javascript:showElem(66);" alt="Dysprosium" title="">
+      <area id="67" shape="rect" coords="462.22222222222223,361.48148148148147,497.77777777777777,408.88888888888886" href="javascript:showElem(67);" alt="Holmium" title="">
+      <area id="68" shape="rect" coords="497.7777777777778,361.48148148148147,533.3333333333334,408.88888888888886" href="javascript:showElem(68);" alt="Erbium" title="">
+      <area id="69" shape="rect" coords="533.3333333333334,361.48148148148147,568.8888888888889,408.88888888888886" href="javascript:showElem(69);" alt="Thulium" title="">
+      <area id="70" shape="rect" coords="568.8888888888889,361.48148148148147,604.4444444444445,408.88888888888886" href="javascript:showElem(70);" alt="Ytterbium" title="">
+      <area id="71" shape="rect" coords="604.4444444444445,361.48148148148147,640,408.88888888888886" href="javascript:showElem(71);" alt="Lutetium" title="">
+      <area id="72" shape="rect" coords="106.66666666666667,260.7407407407407,142.22222222222223,308.1481481481481" href="javascript:showElem(72);" alt="Hafnium" title="">
+      <area id="73" shape="rect" coords="142.22222222222223,260.7407407407407,177.77777777777777,308.1481481481481" href="javascript:showElem(73);" alt="Tantalum" title="">
+      <area id="74" shape="rect" coords="177.77777777777777,260.7407407407407,213.33333333333331,308.1481481481481" href="javascript:showElem(74);" alt="Tungsten" title="">
+      <area id="75" shape="rect" coords="213.33333333333334,260.7407407407407,248.8888888888889,308.1481481481481" href="javascript:showElem(75);" alt="Rhenium" title="">
+      <area id="76" shape="rect" coords="248.8888888888889,260.7407407407407,284.44444444444446,308.1481481481481" href="javascript:showElem(76);" alt="Osmium" title="">
+      <area id="77" shape="rect" coords="284.44444444444446,260.7407407407407,320,308.1481481481481" href="javascript:showElem(77);" alt="Iridium" title="">
+      <area id="78" shape="rect" coords="320,260.7407407407407,355.55555555555554,308.1481481481481" href="javascript:showElem(78);" alt="Platinum" title="">
+      <area id="79" shape="rect" coords="355.55555555555554,260.7407407407407,391.1111111111111,308.1481481481481" href="javascript:showElem(79);" alt="Gold" title="">
+      <area id="80" shape="rect" coords="391.11111111111114,260.7407407407407,426.6666666666667,308.1481481481481" href="javascript:showElem(80);" alt="Mercury" title="">
+      <area id="81" shape="rect" coords="426.6666666666667,260.7407407407407,462.22222222222223,308.1481481481481" href="javascript:showElem(81);" alt="Thallium" title="">
+      <area id="82" shape="rect" coords="462.22222222222223,260.7407407407407,497.77777777777777,308.1481481481481" href="javascript:showElem(82);" alt="Lead" title="">
+      <area id="83" shape="rect" coords="497.7777777777778,260.7407407407407,533.3333333333334,308.1481481481481" href="javascript:showElem(83);" alt="Bismuth" title="">
+      <area id="84" shape="rect" coords="533.3333333333334,260.7407407407407,568.8888888888889,308.1481481481481" href="javascript:showElem(84);" alt="Polonium" title="">
+      <area id="85" shape="rect" coords="568.8888888888889,260.7407407407407,604.4444444444445,308.1481481481481" href="javascript:showElem(85);" alt="Astatine" title="">
+      <area id="86" shape="rect" coords="604.4444444444445,260.7407407407407,640,308.1481481481481" href="javascript:showElem(86);" alt="Radon" title="">
+      <area id="87" shape="rect" coords="0,308.14814814814815,35.55555555555556,355.55555555555554" href="javascript:showElem(87);" alt="Francium" title="">
+      <area id="88" shape="rect" coords="35.55555555555556,308.14814814814815,71.11111111111111,355.55555555555554" href="javascript:showElem(88);" alt="Radium" title="">
+      <area id="89" shape="rect" coords="106.66666666666667,408.88888888888886,142.22222222222223,456.29629629629625" href="javascript:showElem(89);" alt="Actinium" title="">
+      <area id="90" shape="rect" coords="142.22222222222223,408.88888888888886,177.77777777777777,456.29629629629625" href="javascript:showElem(90);" alt="Thorium" title="">
+      <area id="91" shape="rect" coords="177.77777777777777,408.88888888888886,213.33333333333331,456.29629629629625" href="javascript:showElem(91);" alt="Protactinium" title="">
+      <area id="92" shape="rect" coords="213.33333333333334,408.88888888888886,248.8888888888889,456.29629629629625" href="javascript:showElem(92);" alt="Uranium" title="">
+      <area id="93" shape="rect" coords="248.8888888888889,408.88888888888886,284.44444444444446,456.29629629629625" href="javascript:showElem(93);" alt="Neptunium" title="">
+      <area id="94" shape="rect" coords="284.44444444444446,408.88888888888886,320,456.29629629629625" href="javascript:showElem(94);" alt="Plutonium" title="">
+      <area id="95" shape="rect" coords="320,408.88888888888886,355.55555555555554,456.29629629629625" href="javascript:showElem(95);" alt="Americium" title="">
+      <area id="96" shape="rect" coords="355.55555555555554,408.88888888888886,391.1111111111111,456.29629629629625" href="javascript:showElem(96);" alt="Curium" title="">
+      <area id="97" shape="rect" coords="391.11111111111114,408.88888888888886,426.6666666666667,456.29629629629625" href="javascript:showElem(97);" alt="Berkelium" title="">
+      <area id="98" shape="rect" coords="426.6666666666667,408.88888888888886,462.22222222222223,456.29629629629625" href="javascript:showElem(98);" alt="Californium" title="">
+      <area id="99" shape="rect" coords="462.22222222222223,408.88888888888886,497.77777777777777,456.29629629629625" href="javascript:showElem(99);" alt="Einsteinium" title="">
+      <area id="100" shape="rect" coords="497.7777777777778,408.88888888888886,533.3333333333334,456.29629629629625" href="javascript:showElem(100);" alt="Fermium" title="">
+      <area id="101" shape="rect" coords="533.3333333333334,408.88888888888886,568.8888888888889,456.29629629629625" href="javascript:showElem(101);" alt="Mendelevium" title="">
+      <area id="102" shape="rect" coords="568.8888888888889,408.88888888888886,604.4444444444445,456.29629629629625" href="javascript:showElem(102);" alt="Nobelium" title="">
+      <area id="103" shape="rect" coords="604.4444444444445,408.88888888888886,640,456.29629629629625" href="javascript:showElem(103);" alt="Lawrencium" title="">
+      <area id="104" shape="rect" coords="106.66666666666667,308.14814814814815,142.22222222222223,355.55555555555554" href="javascript:showElem(104);" alt="Rutherfordium" title="">
+      <area id="105" shape="rect" coords="142.22222222222223,308.14814814814815,177.77777777777777,355.55555555555554" href="javascript:showElem(105);" alt="Dubnium" title="">
+      <area id="106" shape="rect" coords="177.77777777777777,308.14814814814815,213.33333333333331,355.55555555555554" href="javascript:showElem(106);" alt="Seaborgium" title="">
+      <area id="107" shape="rect" coords="213.33333333333334,308.14814814814815,248.8888888888889,355.55555555555554" href="javascript:showElem(107);" alt="Bohrium" title="">
+      <area id="108" shape="rect" coords="248.8888888888889,308.14814814814815,284.44444444444446,355.55555555555554" href="javascript:showElem(108);" alt="Hassium" title="">
+      <area id="109" shape="rect" coords="284.44444444444446,308.14814814814815,320,355.55555555555554" href="javascript:showElem(109);" alt="Meitnerium" title="">
+      <area id="110" shape="rect" coords="320,308.14814814814815,355.55555555555554,355.55555555555554" href="javascript:showElem(110);" alt="Darmstadtium" title="">
+      <area id="111" shape="rect" coords="355.55555555555554,308.14814814814815,391.1111111111111,355.55555555555554" href="javascript:showElem(111);" alt="Roentgenium" title="">
+      <area id="112" shape="rect" coords="391.11111111111114,308.14814814814815,426.6666666666667,355.55555555555554" href="javascript:showElem(112);" alt="Copernicium" title="">
+      <area id="113" shape="rect" coords="426.6666666666667,308.14814814814815,462.22222222222223,355.55555555555554" href="javascript:showElem(113);" alt="Nihonium" title="">
+      <area id="114" shape="rect" coords="462.22222222222223,308.14814814814815,497.77777777777777,355.55555555555554" href="javascript:showElem(114);" alt="Flerovium" title="">
+      <area id="115" shape="rect" coords="497.7777777777778,308.14814814814815,533.3333333333334,355.55555555555554" href="javascript:showElem(115);" alt="Moscovium" title="">
+      <area id="116" shape="rect" coords="533.3333333333334,308.14814814814815,568.8888888888889,355.55555555555554" href="javascript:showElem(116);" alt="Livermorium" title="">
+      <area id="117" shape="rect" coords="568.8888888888889,308.14814814814815,604.4444444444445,355.55555555555554" href="javascript:showElem(117);" alt="Tennessine" title="">
+      <area id="118" shape="rect" coords="604.4444444444445,308.14814814814815,640,355.55555555555554" href="javascript:showElem(118);" alt="Oganesson" title="">
+    </map>-->
+  </main>
+  <!-- InstanceEndEditable -->
+  <footer>
+    <!-- InstanceBeginEditable name="footer_1" -->
+    <!-- InstanceEndEditable -->
+	
+      	  
+      <div id="copyright" vocab="http://purl.org/dc/terms/" class="center">
+        <span property="title">Interactive Periodic Table of the Elements, in Pictures and Words</span>
+        <span property="rights">© 
+          <span property="created">2005</span>-<span property="modified">2016</span>
+          <span property="creator">Keith Enevoldsen</span>
+        </span>
+        <span property="identifier">elements.wlonk.com</span>
+      </div>
+       
+      
+    
+   	
+      	  
+      <div class="center">
+        <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a>
+        This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license" style="font-weight: normal;">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.
+      </div>
+      
+      
+    
+	
+    <div class="center">
+      <a class="display-font" href="index.htm">elements.wlonk.com</a>
+    </div>
+    <!-- InstanceBeginEditable name="footer_2" --> <!-- InstanceEndEditable -->
+  </footer>
+</div>
+
+<!-- InstanceEnd -->
+</body>
+
+</html>

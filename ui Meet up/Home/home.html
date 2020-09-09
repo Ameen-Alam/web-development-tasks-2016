@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="../style/home.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAz4D6yxH_6jzfd7wXX_YKCH0RtN8d7z_0",
+    authDomain: "meetup-d162c.firebaseapp.com",
+    databaseURL: "https://meetup-d162c.firebaseio.com",
+    projectId: "meetup-d162c",
+    storageBucket: "meetup-d162c.appspot.com",
+    messagingSenderId: "244786174567"
+  };
+  firebase.initializeApp(config);
+</script>
+
+</head>
+<body>
+
+       <div class="background_setting">
+         <div class="row">
+           <div class="nave_style col-md-12">
+           <div class="row">
+           </body>
+            <div class="col-md-12">       
+           <div class="row ">
+             <div class="col-md-9">   
+                <h1 class="Headding_name" id="userHeadinName"></h1>
+             </div>   
+             <div class="col-md-3">   
+                    <button class="btn btn-danger Sing_button" onClick="singOut()">Sing out</button>                    
+             </div> 
+           </div>   
+            </div>
+           </div>
+               
+               <div class="row">
+                <div class="col-md-3">
+                <button class="btn btn create_event_button"  data-toggle="modal" data-target="#myModal">Create Event</button>
+            </div>  
+                <div class="col-md-3">
+                 <button class="btn btn-primary create_event_button" onClick="allpost()">All Evevnts</button>
+                </div>
+             
+            </div>   
+        </div> 
+        </div>
+       </div>
+
+       
+
+
+ 
+        <div class="col-md-12 backgroun_style">    
+                <div id="containerDiv" class="event_style">
+              </div>
+            </div>
+        
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+        
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">Create Event</h4>
+                    </div> <!-- /.modal-header -->
+        
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control"  placeholder="Event" id="eventName">
+                                   
+                                </div>
+                            </div> <!-- /.form-group -->
+        
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control"  placeholder="Location" id="eventLocation">
+                                 
+                                </div> <!-- /.input-group -->
+                            </div> <!-- /.form-group -->
+        
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control"  placeholder="Date & Time" id="eventDateAndTime">
+                                 
+                                </div> <!-- /.input-group -->
+                            </div> <!-- /.form-group -->
+    
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <textarea class="form-control"   placeholder="Discription" id="description"></textarea>
+                                 
+                                </div> <!-- /.input-group -->
+                            </div> <!-- /.form-group -->
+
+                        </form>
+        
+                    </div> <!-- /.modal-body -->
+        
+                    <div class="modal-footer">
+                        <button type="button" class="form-control btn btn-primary"  onClick="renderEvents()">Ok</button>
+        
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="100" style="width: 0%;">
+                                <span class="sr-only">progress</span>
+                            </div>
+                        </div>
+                    </div> <!-- /.modal-footer -->
+        
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+   
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  
+</body>
+
+<script src="../script/jquery.js"></script>
+<script src="../script/home.js"></script>
+<!-- <script src="../script/form_code.js"></script> -->
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCs1oOVYeTsw-NGv0_oOYAaZuTrGncPCEE",
+    authDomain: "mass-trainingbatch.firebaseapp.com",
+    databaseURL: "https://mass-trainingbatch.firebaseio.com",
+    projectId: "mass-trainingbatch",
+    storageBucket: "mass-trainingbatch.appspot.com",
+    messagingSenderId: "770297055379"
+  };
+  firebase.initializeApp(config);
+</script></head>
+<body>
+    <!-- Image and text -->
+<nav class="navbar navbar-light fixed-top" style="background: #25b99a;">
+        <a class="navbar-brand" href="#">
+          <img src="done.jpg" width="40" height="35" class="d-inline-block align-top" alt="">
+          <b style="color:#fff;">TodoApp</b>
+        </a>
+      </nav>
+    <div class="container-fluid">
+        
+<div class="row m-t20 ">
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3"></div>
+    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 " >
+                       <div class="input-group fixed-top"  style="margin-top:60px;">
+                      <input type="text" id="inputTodo" class="form-control" placeholder="Enter your task todo ..." aria-label="Enter your task todo ...">
+                      <span class="input-group-btn">
+                        <button class="btn" onclick="AddTodo()" type="button" style="background: #25b99a; color:#fff;">Add !</button>
+                      </span>
+                    </div>
+                    <div class="alert alert-danger m-t10" id="alert" role="alert">
+                            <strong>Warning !</strong> <a href="#" class="alert-link">Please enter work todo..!!</a>
+                          </div>
+                  <ul class="list-group m-t20" id="list" style="margin-top:130px;"> </ul> 
+        </div>
+
+ <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3"></div>
+    </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header mheader">
+              <h5 class="modal-title" id="exampleModalLongTitle">Edit Todo</h5>
+              <button type="button" class="close btnclose" data-dismiss="modal" aria-label="Close">
+                <span  class="btnclose" aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <input type="text" id="editTodo" class="form-control" placeholder="Edit your task todo ..." aria-label="Edit your task todo ..." />
+                                      
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="updateButton"  class="btn btn-outline-info" data-dismiss="modal">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+  
+</body>
+<footer>
+  <marquee behavior="fixe" direction="left" onmouseover="this.stop()" onmouseout="this.start()" > <div > Their is S.M. Ameen Alam 18 years old beloved son of middle class family from North Karachi that has passed inter pre-engineering and want to continue it. presently learning as web designer in web designing which is associate with my childhood when I was 12 years old my elder sister advised me to join software-engineering Insha’Allah, it will become good luck for you so, my respected parents supported and allowed me first time as software helper at computer shop really that was good opportunity for my career advancement. There I final decided my vision that was not possible for me after way of success life has been providing many chances. I hope your organization will open new doors towards my vision and I will definitely assist for the World as Pakistani by Rehmat-e-RabbulAlameen.. </div> </marquee>
+
+    </footer>
+</html>

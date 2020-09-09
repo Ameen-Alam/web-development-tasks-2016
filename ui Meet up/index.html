@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log In</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAz4D6yxH_6jzfd7wXX_YKCH0RtN8d7z_0",
+        authDomain: "meetup-d162c.firebaseapp.com",
+        databaseURL: "https://meetup-d162c.firebaseio.com",
+        projectId: "meetup-d162c",
+        storageBucket: "meetup-d162c.appspot.com",
+        messagingSenderId: "244786174567"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+</head>
+<body>
+
+        <div class="row">
+        <div class="nave_style">
+          <div class="col-md-12">
+           <div class="row">
+             <div class="col-md-7">
+              <h1 class="meet_up_headding">Meetup Application</h1>
+            </div>
+           </div>
+          </div> 
+        </div>
+       </div>
+
+
+            <div>
+              <!-- <h1 class="h1 log_in">Log In</h1> -->
+                <div class="col-lg-12 log_in">
+                <div id="logbox">
+                  <form id="stop">
+                    <h1>account login</h1>
+                    <input name="user[email]" type="email" placeholder="Email address" class="input pass" id="userEmail"/>
+                    <input name="user[password]" type="password" placeholder="Password" required="required" id="userPass" class="input pass"/>
+                    <input type="submit" value="Sign me in!" class="inputButton">
+                    <!-- ***************************************************************** -->
+                    <hr>
+                    <input type="button" value="Create an account" class="create_account_button" onClick="createAccount()"/>
+                  </form>
+                </div>
+                </div>
+              </div>
+
+    <!-- ********************************************************************************************************************************** -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+<script src="script/login.js"></script>
+</html>

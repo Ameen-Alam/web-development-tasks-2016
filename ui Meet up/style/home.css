@@ -1,0 +1,147 @@
+
+
+/* **********************Nave*********************************/
+
+/* *******************************************************/
+   @import url(http://fonts.googleapis.com/css?family=Roboto);
+   html {
+       font-family: 'Roboto', sans-serif;
+    
+   }
+
+    body{
+   background-image: url("https://case.edu/events/media/caseedu/events/images/Calendar-2152x1413.jpg");
+   /* background-image: url("https://tse3.mm.bing.net/th?id=OIP.EQ8UR0lv5CUpv_TVDDuXhgEsDh&pid=15.1&P=0&w=270&h=203"); */
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100%; 
+    
+}
+
+.modal-dialog {
+    width: 300px;
+}
+.modal-footer {
+    height: 70px;
+    margin: 0;
+}
+.modal-footer .btn {
+    font-weight: bold;
+}
+.modal-footer .progress {
+    display: none;
+    height: 32px;
+    margin: 0;
+}
+.input-group-addon {
+    color: #fff;
+    background: #3276B1;
+}
+.create_event_button{
+    margin-left: 280px;
+    width: 200px; 
+    margin-top: 55px;
+    height: 60px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    position: absolute;
+    color: #ffffff;
+    background-color:#087AFD; 
+    border-radius: 5px;
+   
+}
+
+.create_event_button:hover{
+    background-color:rgb(32, 147, 255); 
+    border: 2px solid #0360AC;
+    height: 55px;
+}
+
+
+.nave_style{
+    background-color: #171F1F;
+    width: 100%;
+    height: 210px;
+    border-bottom:  5px solid #4186ED;
+    opacity: 0.9;
+}  
+  .card {
+    background-color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    width: 950px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 1px 1px #fff;
+    
+  }
+
+  .date{
+    color: #fff;
+    background-color: #2266E4;
+    padding-left: 12px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .event_name{
+    padding-left: 10px; 
+    padding-right: 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .location{
+    padding-left: 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    padding-right: 10px; 
+    
+  }
+
+  .disription{
+    padding-right: 10px; 
+    padding-left: 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .div1{
+    background-color: #C5C9CC;
+    height: 450px;
+    
+  }
+
+  .h3Headding{
+    padding-left: 10px;  
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    padding-right: 10px;
+    background-color: #2266E4;
+    color: #fff;
+  }
+
+textarea{
+    height: 100px;
+    max-height: 100px;
+}
+.Headding_name{
+    color:  #ffffff;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 5px;  
+  
+}
+
+.Sing_button{
+    margin-top: 10px; 
+    margin-bottom: 20px;
+    width: 180px; 
+    background-color: #F13333;
+    height: 50px;
+    margin-left: 35px;
+    position: relative;
+}

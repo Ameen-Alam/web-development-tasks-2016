@@ -1,0 +1,2086 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+              <meta name="robots" content="noodp,nodir,noydir" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQIBUF5RGwcBXFVaBwYF"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" >
+    
+  <meta name="description" content="Find freelancers and freelance jobs on Upwork - the world's largest online workplace where savvy businesses and professional freelancers go to work!" />
+  <meta property="og:title" content="Upwork, the world's largest online workplace"/>
+  <meta property="og:image" content="https://www.upwork.com/static/marketing/ui/master/img/logo-1200x630.png"/>
+  <meta property="og:description" content="Upwork is the world’s largest freelance talent marketplace. Our vision is to connect businesses with great talent faster than ever before."/>
+  <meta property="og:url" content="https://www.upwork.com"/>
+  <meta property="og:site_name" content="Upwork"/>
+  <meta property="og:type" content="website"/>
+
+  <meta name="google-site-verification" content="1mYKMSoLNJBIZsIFeVbKrWKIWiF5G4mAZUke4Lt0dHA" />
+  <meta name="msvalidate.01" content="792FAE3BBB1963C097705C92F7902F4B" />
+
+  <meta name="format-detection" content="telephone=no">
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Organization",
+      "name" : "Upwork Global Inc.",
+      "url" : "https://www.upwork.com",
+      "logo": "https://www.upwork.com/static/marketing/ui/master/img/logo-1200x630.png",
+      "sameAs" : [
+        "https://plus.google.com/107040851368295259701",
+        "https://twitter.com/Upwork",
+        "https://www.linkedin.com/company/upwork",
+        "https://www.facebook.com/upwork",
+        "https://www.youtube.com/channel/UCvxGFOnwUBDHHcxuPqhe4CQ"
+      ],
+      "contactPoint" : [
+        { "@type" : "ContactPoint", "telephone" : "+1.650.316.7500", "contactType" : "customer support" },
+        { "@type" : "ContactPoint", "telephone" : "+1.650.316.7500", "contactType" : "technical support" },
+        { "@type" : "ContactPoint", "telephone" : "+1.650.316.7500", "contactType" : "billing support" }
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://www.upwork.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.upwork.com/o/profiles/browse/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+    <title>Upwork - Hire Freelancers &amp; Get Freelance Jobs Online</title>
+
+        <link rel="stylesheet" media="all" href="https://www.upwork.com/static/marketing/ui/4.0.10/css/components.css"><link rel="stylesheet" media="all" href="https://www.upwork.com/static/marketing/ui/4.0.10/css/fonts-base.css">
+
+  <link rel="stylesheet" media="all" href="//www.upwork.com/static/marketing/adquiro-webpack/homepage.20eda62d0303.css">
+
+      <link rel="preload" href="https://www.upwork.com/static/marketing/ui/4.0.10/css/fonts-async.css" as="style" onload="this.rel='stylesheet'"  />
+  <noscript><link rel="stylesheet" href="https://www.upwork.com/static/marketing/ui/4.0.10/css/fonts-async.css"  /></noscript>
+
+<script>
+(function(w){"use strict";var loadCSS=function(href,before,media){var doc=w.document;var ss=doc.createElement("link");var ref;if(before){ref=before}else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";function ready(cb){if(doc.body){return cb()}setTimeout(function(){ready(cb)})}ready(function(){ref.parentNode.insertBefore(ss,before?ref:ref.nextSibling)});var onloadcssdefined=function(cb){var resolvedHref=ss.href;var i=sheets.length;while(i--){if(sheets[i].href===resolvedHref){return cb()}}setTimeout(function(){onloadcssdefined(cb)})};function loadCB(){if(ss.addEventListener){ss.removeEventListener("load",loadCB)}ss.media=media||"all"}if(ss.addEventListener){ss.addEventListener("load",loadCB)}ss.onloadcssdefined=onloadcssdefined;onloadcssdefined(loadCB);return ss};if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}})(typeof global!=="undefined"?global:this);(function(w){if(!w.loadCSS){return}var rp=loadCSS.relpreload={};rp.support=function(){try{return w.document.createElement("link").relList.supports("preload")}catch(e){return false}};rp.poly=function(){var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"){w.loadCSS(link.href,link);link.rel=null}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,300);if(w.addEventListener){w.addEventListener("load",function(){w.clearInterval(run)})}if(w.attachEvent){w.attachEvent("onload",function(){w.clearInterval(run)})}}})(this);
+</script>
+
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="//www.upwork.com/static/marketing/adquiro-assetic/324b8cd/apple-touch-icon.png">
+
+    <link rel="canonical" href="https://www.upwork.com/" />
+    <meta name="alexaVerifyID" content="jLn8sS342tB8jpIVZLQVC_AFpLg" />
+
+
+                        <script src="//cdn.optimizely.com/js/2765661494.js"></script>
+        
+            
+  <script>!function(e,n,t){function o(e,n){return typeof e===n}function s(){var e,n,t,s,a,i,r;for(var l in c)if(c.hasOwnProperty(l)){if(e=[],n=c[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(s=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],r=i.split("."),1===r.length?Modernizr[r[0]]=s:(!Modernizr[r[0]]||Modernizr[r[0]]instanceof Boolean||(Modernizr[r[0]]=new Boolean(Modernizr[r[0]])),Modernizr[r[0]][r[1]]=s),f.push((s?"":"no-")+r.join("-"))}}function a(e){var n=u.className,t=Modernizr._config.classPrefix||"";if(p&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(o,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),p?u.className.baseVal=n:u.className=n)}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):p?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function r(){var e=n.body;return e||(e=i(p?"svg":"body"),e.fake=!0),e}function l(e,t,o,s){var a,l,f,c,d="modernizr",p=i("div"),h=r();if(parseInt(o,10))for(;o--;)f=i("div"),f.id=s?s[o]:d+(o+1),p.appendChild(f);return a=i("style"),a.type="text/css",a.id="s"+d,(h.fake?h:p).appendChild(a),h.appendChild(p),a.styleSheet?a.styleSheet.cssText=e:a.appendChild(n.createTextNode(e)),p.id=d,h.fake&&(h.style.background="",h.style.overflow="hidden",c=u.style.overflow,u.style.overflow="hidden",u.appendChild(h)),l=t(p,e),h.fake?(h.parentNode.removeChild(h),u.style.overflow=c,u.offsetHeight):p.parentNode.removeChild(p),!!l}var f=[],c=[],d={_version:"3.5.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){c.push({name:e,fn:n,options:t})},addAsyncTest:function(e){c.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=d,Modernizr=new Modernizr;var u=n.documentElement,p="svg"===u.nodeName.toLowerCase(),h=d._config.usePrefixes?" -webkit- -moz- -o- -ms- ".split(" "):["",""];d._prefixes=h;var m=d.testStyles=l;Modernizr.addTest("touchevents",function(){var t;if("ontouchstart"in e||e.DocumentTouch&&n instanceof DocumentTouch)t=!0;else{var o=["@media (",h.join("touch-enabled),("),"heartz",")","{#modernizr{top:9px;position:absolute}}"].join("");m(o,function(e){t=9===e.offsetTop})}return t}),s(),a(f),delete d.addTest,delete d.addAsyncTest;for(var v=0;v<Modernizr._q.length;v++)Modernizr._q[v]();e.Modernizr=Modernizr}(window,document);</script>
+
+    <script type="text/javascript">
+    // global Applet object
+    var Applet = new function() {
+        var basePath = '/i';
+        var phpVars = {"wordpress_api":{"sites":{"press":{"base_url":"https:\/\/www.upwork.com\/press\/wp-json\/wp\/v2\/","endpoint":{"enterprise_press":"enterprise_press","resource":"resource"}},"hiring":{"base_url":"https:\/\/www.upwork.com\/hiring\/wp-json\/wp\/v2\/","endpoint":{"posts":"posts","seo_skill_pages":"seo-skill-pages"}},"legal":{"base_url":"https:\/\/www.upwork.com\/legal\/wp-json\/wp\/v2\/","endpoint":{"resource":"resource","resource_category":"resource_category","resource_country":"resource_country"}},"demandgen":{"base_url":"\/i\/api\/wp\/","endpoint":{"enterprise":"demandgen_enterprise","enterprise_category":"demandgen_enterprise_category","resource":"demandgen_resource","resource_category":"demandgen_resource_category","resource_type":"demandgen_resource_type"}},"seo":{"base_url":"\/i\/api\/wp\/","endpoint":{"feedback_questions":"seo_feedback_questions","questions":"seo_questions","skills":"seo_skills","guides":"seo_guides","guide_categories":"seo_guide_categories"}}}},"event_data":{"data":{"qt":[],"holdout_group":true,"segments":[],"demandbase":{"audience":"SMB","audience_segment":"Software & Technology","country_name":"Pakistan","demandbase_sid":71114086,"employee_count":48,"employee_range":"Very Small","industry":"Technology - IT Services","marketing_alias":"Netsol Connect","registry_country":"Pakistan","revenue_range":"$5M - $10M","sub_industry":"Data & Technical Services"}},"location":"vs_core_homepage","referrer":"desktop_site"},"csrfTokenCookieName":"XSRF-TOKEN","csrfTokenHeaderName":"X-Odesk-Csrf-Token","runtime_id":"393009cb79de6926-CDG","clientStatsDMetrics":true,"smfAjax":false,"NotificationASIntegration":true,"disputesASIntegration":false,"pageSpeedMetrics":false,"ccstCookieName":"oauth2_global_js_token","segmentation.snowplow.collector":"sp-collector.upwork.com","pageId":"homePage"};
+        var angularCache = [];
+        var assetsVersion = "324b8cd";
+        var assetsBaseUri = "";
+        var instanceEnv = "prod";
+
+        var buildBundlePath = function(path) {
+            var bundleRegex = /^@([^\/]*)Bundle\/(.*)$/;
+            var matches = bundleRegex.exec(path);
+
+            if (matches != null) {
+                return '/bundles/' + matches[1].toLowerCase() + '/' + matches[2];
+            }
+            return path;
+        };
+
+        this.getBasePath = function() {
+            return basePath;
+        };
+
+        this.buildInternalAssetPath = function(path) {
+            // CDN assets
+            if (assetsBaseUri) {
+                return assetsBaseUri + '/' + assetsVersion + buildBundlePath(path);
+            }
+
+            // Local assets
+            var url = basePath + buildBundlePath(path);
+            if (assetsVersion) {
+                if (url.indexOf('?') < 0) {
+                    return url + '?' + assetsVersion;
+                } else {
+                    return url + '&' + assetsVersion;
+                }
+            }
+            return url;
+        };
+
+        var visitorId = null;
+                visitorId = "103.84.148.12.1503511927916148";
+        
+        this.getVisitorId = function() {
+            return visitorId;
+        };
+
+        var visitorApiKey = null;
+                    visitorApiKey = "e8ba3167eccf850ef020d8d597b885f7";
+                this.getVisitorApiKey = function() {
+            return visitorApiKey;
+        };
+
+
+        var User = null;
+        
+        this.getUser = function() {
+            return User;
+        };
+
+        var Organization = null;
+        
+        this.getOrganization = function() {
+            return Organization;
+        };
+
+        this.getVar = function(key) {
+            return phpVars[key];
+        };
+
+        this.getAngularCache = function() {
+            return angularCache;
+        };
+
+        this.getInstanceEnv = function() {
+            return instanceEnv;
+        }
+    };
+</script></head>
+<body data-ng-app="uiApplet" class="" data-push-images="/static/marketing/ui/master/img/upwork-logo.svg;/static/marketing/ui/4.0.0/img/sprite-category-icons.svg">
+      <tracking tracking-event = 'impression'
+          tracking-location = 'vs_core_homepage_2'
+          tracking-data = '{&quot;qt&quot;:[],&quot;holdout_group&quot;:true,&quot;segments&quot;:[],&quot;demandbase&quot;:{&quot;audience&quot;:&quot;SMB&quot;,&quot;audience_segment&quot;:&quot;Software &amp; Technology&quot;,&quot;country_name&quot;:&quot;Pakistan&quot;,&quot;demandbase_sid&quot;:71114086,&quot;employee_count&quot;:48,&quot;employee_range&quot;:&quot;Very Small&quot;,&quot;industry&quot;:&quot;Technology - IT Services&quot;,&quot;marketing_alias&quot;:&quot;Netsol Connect&quot;,&quot;registry_country&quot;:&quot;Pakistan&quot;,&quot;revenue_range&quot;:&quot;$5M - $10M&quot;,&quot;sub_industry&quot;:&quot;Data &amp; Technical Services&quot;},&quot;allocationCell&quot;:[&quot;full_service_dolphins_unallocated&quot;]}'
+          tracking-label = ''
+          tracking-olog = '1'
+          tracking-gtm = ''
+          tracking-referrer = 'desktop_site'
+          tracking-sublocation = 'null'
+          tracking-element = ''
+          tracking-gtm-event='ga'
+          tracking-value = ' '></tracking>
+    <div class="off-canvas-wrap" ui-off-canvas>
+        <div class="inner-wrap">
+              
+
+
+
+<header role="banner" class="header-navbar  __mod- "
+    >
+
+  <div class="container">
+          <a href="/" class="logo">
+        <img src="https://www.upwork.com/static/marketing/ui/master/img/upwork-logo.svg" alt="Upwork" width="106"/>
+      </a>
+    
+                <div class="search visible-md visible-lg" data-ng-controller="uiSearchController">
+        <form role="search" action="/o/profiles/browse/" ng-action="action" method="get" ng-submit="search()" ng-init="context = 'client'"
+          >
+          <div class="input-group">
+            <div class="dropdown" ng-class="{active: isOpen}">
+              <input id="search-freelancers" type="radio" ng-model="context" value="client" ng-disabled="actionSelectDisabled">
+              <label for="search-freelancers" ng-click="context = 'client'">Freelancers</label>
+              <input id="search-jobs" type="radio" ng-model="context" value="freelancer" ng-disabled="actionSelectDisabled">
+              <label for="search-jobs" ng-click="context = 'freelancer'">Jobs</label>
+            </div>
+            <span 
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'primary-navbar'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'navbar-search-drop-down'
+tracking-gtm-event='ga'
+                  class="button" ng-click="toggleDropDown()"></span>
+            <input placeholder="Find Freelancers"
+              ng-placeholder="placeholder" maxlength="100" autocomplete="off" ng-model="query" eo-focus="focus"
+              type="text" name="q" id="q">
+          </div>
+        </form>
+      </div>
+    
+    <div class="visible-md visible-lg desktop-navbar">
+      
+<nav class="nav font-gotham-medium">
+      <ul class="site-links list-inline pull-left">
+      <li ui-sub-menu><a class="text-uppercase" ui-menu-active>Browse</a><ul class="sub-menu list-unstyled font-gotham-book"><li class="tile active"><a class="tile-title font-gotham-bold" ui-sub-menu-item><strong>Browse Categories</strong></a><ul class="list-unstyled"><li><a href="/cat/developers/"
+                      >Web Developers
+                    </a></li><li><a href="/cat/mobile-developers/"
+                      >Mobile Developers
+                    </a></li><li><a href="/cat/designers/"
+                      >Designers &amp; Creatives
+                    </a></li><li><a href="/cat/writing/"
+                      >Writers
+                    </a></li><li><a href="/cat/administrative-support/"
+                      >Virtual Assistants
+                    </a></li><li><a href="/cat/customer-service/"
+                      >Customer Service Agents
+                    </a></li><li><a href="/cat/sales-marketing/"
+                      >Sales &amp; Marketing Experts
+                    </a></li><li><a href="/cat/accounting-consulting/"
+                      >Accountants &amp; Consultants
+                    </a></li><li><a href="/i/freelancer-categories/">View All Categories</a></li></ul></li><li class="tile"><a class="tile-title font-gotham-bold" ui-sub-menu-item><strong>Browse Freelancers</strong></a><ul class="list-unstyled"><li><a href="/o/profiles/browse/c/web-mobile-software-dev/"
+                      >Web, Mobile &amp; Software Dev
+                    </a></li><li><a href="/o/profiles/browse/c/it-networking/"
+                      >IT &amp; Networking
+                    </a></li><li><a href="/o/profiles/browse/c/data-science-analytics/"
+                      >Data Science &amp; Analytics
+                    </a></li><li><a href="/o/profiles/browse/c/engineering-architecture/"
+                      >Engineering &amp; Architecture
+                    </a></li><li><a href="/o/profiles/browse/c/design-creative/"
+                      >Design &amp; Creative
+                    </a></li><li><a href="/o/profiles/browse/c/writing/"
+                      >Writing
+                    </a></li><li><a href="/o/profiles/browse/c/translation/"
+                      >Translation
+                    </a></li><li><a href="/o/profiles/browse/c/legal/"
+                      >Legal
+                    </a></li><li><a href="/o/profiles/browse/c/admin-support/"
+                      >Admin Support
+                    </a></li><li><a href="/o/profiles/browse/c/customer-service/"
+                      >Customer Service
+                    </a></li><li><a href="/o/profiles/browse/c/sales-marketing/"
+                      >Sales &amp; Marketing
+                    </a></li><li><a href="/o/profiles/browse/c/accounting-consulting/"
+                      >Accounting &amp; Consulting
+                    </a></li><li><a href="/o/profiles/browse/">View All Freelancers</a></li></ul></li><li class="tile"><a class="tile-title font-gotham-bold" ui-sub-menu-item><strong>Browse Jobs</strong></a><ul class="list-unstyled"><li><a href="/o/jobs/browse/c/web-mobile-software-dev/">Web, Mobile &amp; Software Dev</a></li><li><a href="/o/jobs/browse/c/it-networking/">IT &amp; Networking</a></li><li><a href="/o/jobs/browse/c/data-science-analytics/">Data Science &amp; Analytics</a></li><li><a href="/o/jobs/browse/c/engineering-architecture/">Engineering &amp; Architecture</a></li><li><a href="/o/jobs/browse/c/design-creative/">Design &amp; Creative</a></li><li><a href="/o/jobs/browse/c/writing/">Writing</a></li><li><a href="/o/jobs/browse/c/translation/">Translation</a></li><li><a href="/o/jobs/browse/c/legal/">Legal</a></li><li><a href="/o/jobs/browse/c/admin-support/">Admin Support</a></li><li><a href="/o/jobs/browse/c/customer-service/">Customer Service</a></li><li><a href="/o/jobs/browse/c/sales-marketing/">Sales &amp; Marketing</a></li><li><a href="/o/jobs/browse/c/accounting-consulting/">Accounting &amp; Consulting</a></li><li><a href="/i/job-categories/">View All Categories</a></li></ul></li><li class="tile"><a class="tile-title font-gotham-bold" ui-sub-menu-item><strong>Trending Skills</strong></a><ul class="list-unstyled"><li><a href="/hire/android-developers/">Android Developers</a></li><li><a href="/hire/bookkeepers/">Bookkeeper</a></li><li><a href="/hire/content-writers/">Content Writer</a></li><li><a href="/hire/data-science-freelancers/">Data Scientist</a></li><li><a href="/hire/frontend-development-freelancers/">Front End Developers</a></li><li><a href="/hire/graphic-designers/">Graphic Designer</a></li><li><a href="/hire/ios-developers/">iOS Developers</a></li><li><a href="/hire/seo-experts/">SEO Expert</a></li><li><a href="/hire/ui-designers/">UI Designers</a></li><li><a href="/hire/ux-designers/">UX Designers</a></li></ul></li><li><a href="/hiring/" class="font-gotham-bold"><strong>Browse Hiring Resources</strong></a></li></ul></li><li><a href="/i/how-it-works/client/" class="text-uppercase">How it works</a></li>    </ul>
+
+  
+  <ul class="user-links list-inline pull-right">
+    <li><a href="/signup/?dest=home" class="header-link-signup text-uppercase" id="signup">Sign up</a></li><li><a href="/login" class="header-link-login text-uppercase">Login</a></li><li><a href="/i/how-it-works/freelancer/"             
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'navbar-items'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'navbar-cta'
+tracking-gtm-event='ga'
+            class="btn   btn-default header-cta-feh "
+            
+            >Become a Freelancer
+          </a></li>  </ul>
+</nav>
+    </div>
+
+          <a class="right-off-canvas-toggle menu-icon pull-right" aria-expanded="false" ui-off-canvas-toggle><span></span></a>
+      </div>
+
+      <div class="hidden-md hidden-lg mobile-navbar">
+      <aside class="right-off-canvas-menu">
+        <header>
+                      <a 
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'primary-navbar'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'header-button'
+tracking-gtm-event='ga'
+                class="btn btn-primary" href="/signup/?dest=home"
+                >
+              Get Started
+          </a>
+                    <div class="close pull-right">
+            <a class="exit-off-canvas" ui-off-canvas-hide>×</a>
+          </div>
+        </header>
+
+        <nav role="navigation">
+          <ul class="list-unstyled font-gotham-medium"><li><a href="/">HOME</a></li><li class="with-submenu" ui-expand-list><span ng-click="toggleExpand()">BROWSE CATEGORIES</span><ul class="font-gotham-book"><li><a href="/cat/developers/"
+                          >Web Developers
+                        </a></li><li><a href="/cat/mobile-developers/"
+                          >Mobile Developers
+                        </a></li><li><a href="/cat/designers/"
+                          >Designers &amp; Creatives
+                        </a></li><li><a href="/cat/writing/"
+                          >Writers
+                        </a></li><li><a href="/cat/administrative-support/"
+                          >Virtual Assistants
+                        </a></li><li><a href="/cat/customer-service/"
+                          >Customer Service Agents
+                        </a></li><li><a href="/cat/sales-marketing/"
+                          >Sales &amp; Marketing Experts
+                        </a></li><li><a href="/cat/accounting-consulting/"
+                          >Accountants &amp; Consultants
+                        </a></li><li><a href="/i/freelancer-categories/">View All Categories</a></li></ul></li><li><a href="/i/how-it-works/client/">HOW IT WORKS</a></li><li><a href="/i/how-it-works/freelancer/">BECOME A FREELANCER</a></li><li class="with-submenu" ui-expand-list><span ng-click="toggleExpand()">ABOUT US</span><ul class="font-gotham-book"><li><a href="/about/">About Us</a></li><li><a href="/about/careers/">Careers</a></li><li><a href="/about/team/">Team</a></li><li><a href="/about/board/">Board of Directors</a></li><li><a href="/press/">Press</a></li><li><a href="/about/contact/">Contact Us</a></li></ul></li><li><a href="/signup/?dest=home" class="header-link-signup"
+                          
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'primary-navbar'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'sign-up'
+tracking-gtm-event='ga'
+>SIGN UP
+                  </a></li><li><a class="header-link-login" href="/login">LOGIN</a></li></ul>        </nav>
+
+                            <div class="search" data-ng-controller="uiSearchController">
+            <form role="search" action="/o/profiles/browse/" ng-action="action" method="get" ng-submit="search()" ng-init="context = 'client'">
+              <div class="input-group">
+                <div class="dropdown" ng-class="{active: isOpen}">
+                  <input id="search-freelancers" type="radio" ng-model="context" value="client" ng-disabled="actionSelectDisabled">
+                  <label for="search-freelancers" ng-click="context = 'client'">Freelancers</label>
+                  <input id="search-jobs" type="radio" ng-model="context" value="freelancer" ng-disabled="actionSelectDisabled">
+                  <label for="search-jobs" ng-click="context = 'freelancer'">Jobs</label>
+                </div>
+                <span 
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'primary-navbar'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'navbar-search-drop-down-mobile'
+tracking-gtm-event='ga'
+                      class="button" ng-click="toggleDropDown()"></span>
+                <input placeholder="Find Freelancers"
+                  ng-placeholder="placeholder" maxlength="100" autocomplete="off" ng-model="query"
+                  type="text" name="q" set-focus="focus">
+              </div>
+            </form>
+          </div>
+              </aside>
+    </div>
+  </header>
+
+
+  
+
+
+
+<header role="banner" class="header-navbar hidden-xs hidden-sm  __mod-sticky "
+  ux-sticky-header-pivot=".btn-block-xs.btn-primary"  ux-sticky-header>
+
+  <div class="container">
+          <a href="/" class="logo">
+        <img src="https://www.upwork.com/static/marketing/ui/master/img/upwork-logo.svg" alt="Upwork" width="106"/>
+      </a>
+    
+    
+    <div class="visible-md visible-lg desktop-navbar">
+      
+<nav class="nav font-gotham-medium">
+  
+  <ul class="user-links list-inline pull-right">
+    <li><a href="/signup/?dest=home"             
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'navbar-items'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'navbar-cta'
+tracking-gtm-event='ga'
+            class="btn   btn-primary header-cta-feh "
+            
+            >Get Started
+          </a></li>  </ul>
+</nav>
+    </div>
+
+      </div>
+
+  </header>
+
+
+            <main role="main">
+                      
+<section class="__hero-section __mod-hr-long __mod-mega-title jumbotron jumbotron-xlg landing-hero with-cta bg-cloud
+   yellow-hero takeover-hero
+  "
+      data-push-images="//www.upwork.com/static/marketing/adquiro-webpack/images/yellow-homepage-hero-image.ebc9c6eac172.jpg"
+  >
+
+  <div class="container">
+    <div class="row">
+              <div class="col-sm-7" ng-controller="eeSuggestCtrl as ctrl">
+          <h1 class="m-b-40 hidden-xs">Jen’s kicking butt and so is her web content</h1><h1 class="m-b-40 visible-xs">Get more done with freelancers</h1>
+          
+          <p class="text-long m-b-40 hidden-xs">Get more done with freelancers</p><p class="text-long m-b-80 visible-xs">Grow your business with the top freelancing website</p>
+          
+          <div class="form-group visible-lg visible-md">
+            <div class="input-group">
+              <input type="text" class="form-control"
+                     ng-model="ctrl.categoriesQuery"
+                     placeholder="What type of work do you need?"
+                     eo-typeahead="suggestion as suggestion.category for suggestion in ctrl.getSuggestedCategories($viewValue)"
+                     typeahead-on-select="ctrl.onCategorySelect($item, $model, $label)"
+                     typeahead-focus-first="false"
+                     typeahead-no-results="ctrl.suggestionsResults"
+                     typeahead-loading="ctrl.suggestionsLoading"
+                     typeahead-wait-ms="300"
+                     ng-keyup="ctrl.triggerEEModal($event)">
+              <a href="#" class="btn btn-block-xs btn-primary font-gotham-medium"
+                 ee-modal-toggle>
+                Get Started
+              </a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md">
+            <a href="/signup/?dest=job-posting"
+               class="btn btn-block-xs btn-primary">
+              Get Started
+            </a>
+
+          </div>
+        </div>
+          </div>
+  </div>
+</section>
+
+<script type="text/ng-template" id="ee-modal-template.html">
+  <div class="modal-body modal-ee" ng-init="freelancerURL=&quot;\/signup\/?dest=home&quot;;allocation='control'">
+    <ee-steps>
+      <ee-step name="welcome">
+  <div ng-controller="eeStepWelcomeCtrl as ctrl">
+    
+<tracking tracking-event = 'impression'
+          tracking-location = 'early_engagement_test'
+          tracking-data = '{&quot;qt&quot;:{&quot;CE2596_HipoReg&quot;:&quot;Treatment3&quot;},&quot;holdout_group&quot;:true,&quot;segments&quot;:[],&quot;demandbase&quot;:{&quot;audience&quot;:&quot;SMB&quot;,&quot;audience_segment&quot;:&quot;Software &amp; Technology&quot;,&quot;country_name&quot;:&quot;Pakistan&quot;,&quot;demandbase_sid&quot;:71114086,&quot;employee_count&quot;:48,&quot;employee_range&quot;:&quot;Very Small&quot;,&quot;industry&quot;:&quot;Technology - IT Services&quot;,&quot;marketing_alias&quot;:&quot;Netsol Connect&quot;,&quot;registry_country&quot;:&quot;Pakistan&quot;,&quot;revenue_range&quot;:&quot;$5M - $10M&quot;,&quot;sub_industry&quot;:&quot;Data &amp; Technical Services&quot;}}'
+          tracking-label = ''
+          tracking-olog = '1'
+          tracking-gtm = '1'
+          tracking-referrer = 'desktop_site'
+          tracking-sublocation = 'welcome'
+          tracking-element = ''
+          tracking-gtm-event='ga'
+          tracking-value = ' '></tracking>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <img class="img-responsive m-t-40" src="//www.upwork.com/static/marketing/adquiro-webpack/images/welcome-illo.e5d69b1115d3.svg">
+      </div>
+    </div>
+    <div class="row">
+      <div class="text-center col-md-10 col-md-offset-1">
+        <h2 class="h2-small m-y-40">Tell us a little more</h2>
+        <p class="text-long m-b-40">We'll help you write a job post, so you can quickly connect with qualified freelancers</p>
+        <button class="btn btn-primary m-b-80" ng-click="ctrl.hireFreelancer($event)">Describe your Project</button>
+      </div>
+    </div>
+  </div>
+</ee-step>
+      
+  <ee-step name="category">
+    <div ng-controller="eeStepCategoriesCtrl as ctrl" eo-block="{{ ctrl.isLoading() }}">
+    
+        
+<tracking tracking-event = 'impression'
+          tracking-location = 'early_engagement_test'
+          tracking-data = '{&quot;qt&quot;:{&quot;CE2596_HipoReg&quot;:&quot;Treatment3&quot;},&quot;holdout_group&quot;:true,&quot;segments&quot;:[],&quot;demandbase&quot;:{&quot;audience&quot;:&quot;SMB&quot;,&quot;audience_segment&quot;:&quot;Software &amp; Technology&quot;,&quot;country_name&quot;:&quot;Pakistan&quot;,&quot;demandbase_sid&quot;:71114086,&quot;employee_count&quot;:48,&quot;employee_range&quot;:&quot;Very Small&quot;,&quot;industry&quot;:&quot;Technology - IT Services&quot;,&quot;marketing_alias&quot;:&quot;Netsol Connect&quot;,&quot;registry_country&quot;:&quot;Pakistan&quot;,&quot;revenue_range&quot;:&quot;$5M - $10M&quot;,&quot;sub_industry&quot;:&quot;Data &amp; Technical Services&quot;}}'
+          tracking-label = ''
+          tracking-olog = '1'
+          tracking-gtm = '1'
+          tracking-referrer = 'desktop_site'
+          tracking-sublocation = 'category'
+          tracking-element = ''
+          tracking-gtm-event='ga'
+          tracking-value = ' '></tracking>
+    
+      <div class="bg-cloud step-title">
+        <h2 class="h2-small">Let's start</h2>
+        <p class="text-left font-gotham-medium">What type of work do you need?</p>
+      </div>
+      <div class="step-content">
+        <ul class="two-column">
+          <li ng-repeat="category in ctrl.categories track by $index">
+            <div class="radio">
+              <label>
+                <input name="category_radio"
+                  type="radio"
+                  ng-model="ctrl.eeDataModel.category"
+                  ng-checked="ctrl.eeDataModel.category.uid == category.uid"
+                  ng-value="category">
+                <span class="checkbox-replacement-helper"></span>
+                {{ category.name }}
+              </label>
+            </div>
+          </li>
+        </ul>
+        <p ng-if="!(ctrl.eeDataModel.category && ctrl.eeDataModel.category.name) && ctrl.clickDisabled"
+          class="text-danger m-t-40 text-center font-gotham-medium">Please select an option</p>
+      </div>
+      <div class="step-footer text-center bg-cloud">
+        <div class="to-left">
+          <a href="" ng-click="ctrl.clearStepInfo();eeStepsCtrl.prevStep()" class="font-gotham-medium"><span class="up-icon icon-prev"></span> Back</a>
+        </div>
+        <div class="to-right" ng-click="ctrl.clickDisabled = true">
+          <button class="btn btn-primary"
+            ng-disabled="!(ctrl.eeDataModel.category && ctrl.eeDataModel.category.name)"
+            ng-click="ctrl.saveStepInfo();eeStepsCtrl.nextStep()">Next</button>
+        </div>
+      </div>
+    </div>
+  </ee-step>
+
+      
+  <ee-step name="subcategory">
+    <div ng-controller="eeStepSubCategoriesCtrl as ctrl" eo-block="{{ ctrl.isBlocked }}">
+    
+        
+<tracking tracking-event = 'impression'
+          tracking-location = 'early_engagement_test'
+          tracking-data = '{&quot;qt&quot;:{&quot;CE2596_HipoReg&quot;:&quot;Treatment3&quot;},&quot;holdout_group&quot;:true,&quot;segments&quot;:[],&quot;demandbase&quot;:{&quot;audience&quot;:&quot;SMB&quot;,&quot;audience_segment&quot;:&quot;Software &amp; Technology&quot;,&quot;country_name&quot;:&quot;Pakistan&quot;,&quot;demandbase_sid&quot;:71114086,&quot;employee_count&quot;:48,&quot;employee_range&quot;:&quot;Very Small&quot;,&quot;industry&quot;:&quot;Technology - IT Services&quot;,&quot;marketing_alias&quot;:&quot;Netsol Connect&quot;,&quot;registry_country&quot;:&quot;Pakistan&quot;,&quot;revenue_range&quot;:&quot;$5M - $10M&quot;,&quot;sub_industry&quot;:&quot;Data &amp; Technical Services&quot;}}'
+          tracking-label = ''
+          tracking-olog = '1'
+          tracking-gtm = '1'
+          tracking-referrer = 'desktop_site'
+          tracking-sublocation = 'subcategory'
+          tracking-element = ''
+          tracking-gtm-event='ga'
+          tracking-value = ' '></tracking>
+    
+<div class="bg-cloud step-title"
+>
+        <h2 class="h2-small">Category</h2>
+        <p class="text-left font-gotham-medium">Within {{ ctrl.categoryName }}, what type of work do you need?</p>
+      </div>
+      <div class="step-content">
+        <ul class="two-column">
+          <li ng-repeat="subcategory in ctrl.subcategories track by $index">
+            <div class="radio">
+              <label>
+                <input type="radio"
+                  ng-model="ctrl.subcategory"
+                  name="subcategory_radios"
+                  ng-checked="ctrl.subcategory.name == subcategory.name"
+                  ng-value="subcategory">
+                <span class="checkbox-replacement-helper"></span>
+                {{ subcategory.name }}
+              </label>
+            </div>
+          </li>
+        </ul>
+        <p ng-if="!(ctrl.subcategory && ctrl.subcategory.name) && ctrl.clickDisabled" class="text-danger m-t-40 text-center font-gotham-medium">Please select an option</p>
+      </div>
+      <div class="step-footer text-center bg-cloud">
+        <div class="to-left">
+          <a href="" ng-click="ctrl.clearStepInfo();eeStepsCtrl.prevStep()" class="font-gotham-medium"><span class="up-icon icon-prev"></span> Back</a>
+        </div>
+        <div class="to-right" ng-click="ctrl.clickDisabled = true">
+          <button class="btn btn-primary"
+            ng-disabled="!(ctrl.subcategory && ctrl.subcategory.name)"
+            ng-click="ctrl.saveStepInfo()">Next</button>
+        </div>
+      </div>
+    </div>
+  </ee-step>
+
+      
+  <ee-step name="skill">
+    <div ng-controller="eeStepSkillsCtrl as ctrl" eo-block="{{ ctrl.isLoading() }}">
+    
+        
+<tracking tracking-event = 'impression'
+          tracking-location = 'early_engagement_test'
+          tracking-data = '{&quot;qt&quot;:{&quot;CE2596_HipoReg&quot;:&quot;Treatment3&quot;},&quot;holdout_group&quot;:true,&quot;segments&quot;:[],&quot;demandbase&quot;:{&quot;audience&quot;:&quot;SMB&quot;,&quot;audience_segment&quot;:&quot;Software &amp; Technology&quot;,&quot;country_name&quot;:&quot;Pakistan&quot;,&quot;demandbase_sid&quot;:71114086,&quot;employee_count&quot;:48,&quot;employee_range&quot;:&quot;Very Small&quot;,&quot;industry&quot;:&quot;Technology - IT Services&quot;,&quot;marketing_alias&quot;:&quot;Netsol Connect&quot;,&quot;registry_country&quot;:&quot;Pakistan&quot;,&quot;revenue_range&quot;:&quot;$5M - $10M&quot;,&quot;sub_industry&quot;:&quot;Data &amp; Technical Services&quot;}}'
+          tracking-label = ''
+          tracking-olog = '1'
+          tracking-gtm = '1'
+          tracking-referrer = 'desktop_site'
+          tracking-sublocation = 'skills'
+          tracking-element = ''
+          tracking-gtm-event='ga'
+          tracking-value = ' '></tracking>
+     
+<div class="bg-cloud step-title">
+        <h2 class="h2-small">Skills</h2>
+        <p class="text-left font-gotham-medium">Within {{ ctrl.eeDataModel.category.name }}, what skills are needed to complete this project?</p>
+      </div>
+      <div class="step-content">
+        <ul class="two-column">
+          <li ng-repeat="skill in ctrl.skills track by skill.name">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"
+                  ng-model="skill.selected"
+                  name="skillCheckboxes"
+                  ng-checked="ctrl.isChecked(skill)"
+                  ng-change="ctrl.skillChange(skill)">
+                <span class="checkbox-replacement-helper"></span>
+                {{ skill.prettyName }}
+              </label>
+            </div>
+          </li>
+        </ul>
+        <div class="form-group m-b-40">
+          <input type="text" class="form-control"
+            ng-model="ctrl.skillQuery"
+            placeholder="Don't see the skill needed? Type it here."
+            eo-typeahead="skill as skill.prettyName for skill in ctrl.getSuggestedSkills($viewValue)"
+            typeahead-on-select="ctrl.onSkillSelect($item, $model, $label)">
+        </div>
+      </div>
+      <div class="step-footer text-center bg-cloud">
+        <div class="to-left">
+          <a href="" ng-click="ctrl.clearStepInfo();eeStepsCtrl.prevStep()" class="font-gotham-medium"><span class="up-icon icon-prev"></span> Back</a>
+        </div>
+        <div class="to-right">
+          <button class="btn btn-primary"
+            ng-disabled="ctrl.eeDataModel.skills.length == 0"
+            ng-click="ctrl.saveStepInfo();eeStepsCtrl.nextStep()">Next</button>
+        </div>
+      </div>
+    </div>
+  </ee-step>
+
+      
+  <ee-step name="duration">
+    <div ng-controller="eeStepDurationCtrl as ctrl">
+    
+       
+<tracking tracking-event = 'impression'
+          tracking-location = 'early_engagement_test'
+          tracking-data = '{&quot;qt&quot;:{&quot;CE2596_HipoReg&quot;:&quot;Treatment3&quot;},&quot;holdout_group&quot;:true,&quot;segments&quot;:[],&quot;demandbase&quot;:{&quot;audience&quot;:&quot;SMB&quot;,&quot;audience_segment&quot;:&quot;Software &amp; Technology&quot;,&quot;country_name&quot;:&quot;Pakistan&quot;,&quot;demandbase_sid&quot;:71114086,&quot;employee_count&quot;:48,&quot;employee_range&quot;:&quot;Very Small&quot;,&quot;industry&quot;:&quot;Technology - IT Services&quot;,&quot;marketing_alias&quot;:&quot;Netsol Connect&quot;,&quot;registry_country&quot;:&quot;Pakistan&quot;,&quot;revenue_range&quot;:&quot;$5M - $10M&quot;,&quot;sub_industry&quot;:&quot;Data &amp; Technical Services&quot;}}'
+          tracking-label = ''
+          tracking-olog = '1'
+          tracking-gtm = '1'
+          tracking-referrer = 'desktop_site'
+          tracking-sublocation = 'duration'
+          tracking-element = ''
+          tracking-gtm-event='ga'
+          tracking-value = ' '></tracking>
+    
+<div class="bg-cloud step-title">
+        <h2 class="h2-small">Project duration</h2>
+        <p class="text-left font-gotham-medium">How long do you expect this project to last?</p>
+      </div>
+      <div class="step-content">
+        <ul>
+          <li ng-repeat="duration in ctrl.durations track by $index">
+            <div class="radio">
+              <label>
+                <input type="radio"
+                  ng-model="ctrl.eeDataModel.duration"
+                  name="duration_radios"
+                  ng-checked="ctrl.eeDataModel.duration.value == duration.value"
+                  ng-value="duration">
+                <span class="checkbox-replacement-helper"></span>
+                {{ duration.name }}
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="step-footer text-center bg-cloud">
+        <div class="to-left">
+          <a href="" ng-click="ctrl.clearStepInfo();eeStepsCtrl.prevStep()" class="font-gotham-medium"><span class="up-icon icon-prev"></span> Back</a>
+        </div>
+        <div class="to-right">
+          <button class="btn btn-primary" ng-click="ctrl.saveStepInfo();eeStepsCtrl.nextStep()">Next</button>
+        </div>
+      </div>
+    </div>
+  </ee-step>
+
+      
+  <ee-step name="time">
+    <div ng-controller="eeStepTimeCtrl as ctrl">
+    
+        
+<tracking tracking-event = 'impression'
+          tracking-location = 'early_engagement_test'
+          tracking-data = '{&quot;qt&quot;:{&quot;CE2596_HipoReg&quot;:&quot;Treatment3&quot;},&quot;holdout_group&quot;:true,&quot;segments&quot;:[],&quot;demandbase&quot;:{&quot;audience&quot;:&quot;SMB&quot;,&quot;audience_segment&quot;:&quot;Software &amp; Technology&quot;,&quot;country_name&quot;:&quot;Pakistan&quot;,&quot;demandbase_sid&quot;:71114086,&quot;employee_count&quot;:48,&quot;employee_range&quot;:&quot;Very Small&quot;,&quot;industry&quot;:&quot;Technology - IT Services&quot;,&quot;marketing_alias&quot;:&quot;Netsol Connect&quot;,&quot;registry_country&quot;:&quot;Pakistan&quot;,&quot;revenue_range&quot;:&quot;$5M - $10M&quot;,&quot;sub_industry&quot;:&quot;Data &amp; Technical Services&quot;}}'
+          tracking-label = ''
+          tracking-olog = '1'
+          tracking-gtm = '1'
+          tracking-referrer = 'desktop_site'
+          tracking-sublocation = 'time'
+          tracking-element = ''
+          tracking-gtm-event='ga'
+          tracking-value = ' '></tracking>
+    
+<div class="bg-cloud step-title">
+        <h2 class="h2-small">Time commitment</h2>
+        <p class="text-left font-gotham-medium">What time commitment is required for this project?</p>
+      </div>
+      <div class="step-content">
+        <ul>
+          <li ng-repeat="time in ctrl.times track by $index">
+            <div class="radio">
+              <label>
+                <input  type="radio"
+                  name="time_radios"
+                  ng-model="ctrl.eeDataModel.time"
+                  ng-value="time"
+                  ng-checked="ctrl.eeDataModel.time.value == time.value">
+                <span class="checkbox-replacement-helper"></span>
+                {{time.name}}
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="step-footer text-center bg-cloud">
+        <div class="to-left">
+          <a href="" ng-click="ctrl.clearStepInfo();eeStepsCtrl.prevStep()" class="font-gotham-medium"><span class="up-icon icon-prev"></span> Back</a>
+        </div>
+        <div class="to-right">
+          <button class="btn btn-primary" ng-click="ctrl.saveStepInfo();eeStepsCtrl.nextStep()">Next</button>
+        </div>
+      </div>
+    </div>
+  </ee-step>
+
+      
+  <ee-step name="experience">
+    <div ng-controller="eeStepExperienceCtrl as ctrl" eo-block="{{ eeStepsCtrl.isBlocked }}">
+    
+        
+<tracking tracking-event = 'impression'
+          tracking-location = 'early_engagement_test'
+          tracking-data = '{&quot;qt&quot;:{&quot;CE2596_HipoReg&quot;:&quot;Treatment3&quot;},&quot;holdout_group&quot;:true,&quot;segments&quot;:[],&quot;demandbase&quot;:{&quot;audience&quot;:&quot;SMB&quot;,&quot;audience_segment&quot;:&quot;Software &amp; Technology&quot;,&quot;country_name&quot;:&quot;Pakistan&quot;,&quot;demandbase_sid&quot;:71114086,&quot;employee_count&quot;:48,&quot;employee_range&quot;:&quot;Very Small&quot;,&quot;industry&quot;:&quot;Technology - IT Services&quot;,&quot;marketing_alias&quot;:&quot;Netsol Connect&quot;,&quot;registry_country&quot;:&quot;Pakistan&quot;,&quot;revenue_range&quot;:&quot;$5M - $10M&quot;,&quot;sub_industry&quot;:&quot;Data &amp; Technical Services&quot;}}'
+          tracking-label = ''
+          tracking-olog = '1'
+          tracking-gtm = '1'
+          tracking-referrer = 'desktop_site'
+          tracking-sublocation = 'experience'
+          tracking-element = ''
+          tracking-gtm-event='ga'
+          tracking-value = ' '></tracking>
+    
+<div class="bg-cloud step-title">
+        <h2 class="h2-small">Experience</h2>
+        <p class="text-left font-gotham-medium">What is your desired experience level?</p>
+      </div>
+      <div class="step-content">
+        <ul>
+          <li ng-repeat="experience in ctrl.experiences track by $index">
+            <div class="radio">
+              <label>
+                <input  type="radio"
+                  name="experience_radios"
+                  ng-model="ctrl.eeDataModel.experience"
+                  ng-value="experience"
+                  ng-checked="ctrl.eeDataModel.experience.value == experience.value">
+                <span class="checkbox-replacement-helper"></span>
+                {{ experience.name }}
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="step-footer text-center bg-cloud">
+        <div class="to-left">
+          <a href="" ng-click="ctrl.clearStepInfo();eeStepsCtrl.prevStep()" class="font-gotham-medium"><span class="up-icon icon-prev"></span> Back</a>
+        </div>
+        <div class="to-right">
+          <button class="btn btn-primary" ng-click="ctrl.saveStepInfo();eeStepsCtrl.nextStep()">Next</button>
+        </div>
+      </div>
+    </div>
+  </ee-step>
+
+      <ee-step name="registration">
+  
+
+    
+  <div ng-controller="RegFormController as vm"
+    ng-init="ologLocation=&quot;early_engagement_test&quot;;eeUrlParam=eeStepsCtrl.eeUrlParam;"
+    eo-block="{{ vm.isBlocked() }}"
+    class="ee-modal-form">
+      
+<tracking tracking-event = 'impression'
+          tracking-location = 'early_engagement_test'
+          tracking-data = '{&quot;qt&quot;:{&quot;CE2596_HipoReg&quot;:&quot;Treatment3&quot;},&quot;holdout_group&quot;:true,&quot;segments&quot;:[],&quot;demandbase&quot;:{&quot;audience&quot;:&quot;SMB&quot;,&quot;audience_segment&quot;:&quot;Software &amp; Technology&quot;,&quot;country_name&quot;:&quot;Pakistan&quot;,&quot;demandbase_sid&quot;:71114086,&quot;employee_count&quot;:48,&quot;employee_range&quot;:&quot;Very Small&quot;,&quot;industry&quot;:&quot;Technology - IT Services&quot;,&quot;marketing_alias&quot;:&quot;Netsol Connect&quot;,&quot;registry_country&quot;:&quot;Pakistan&quot;,&quot;revenue_range&quot;:&quot;$5M - $10M&quot;,&quot;sub_industry&quot;:&quot;Data &amp; Technical Services&quot;}}'
+          tracking-label = ''
+          tracking-olog = '1'
+          tracking-gtm = '1'
+          tracking-referrer = 'desktop_site'
+          tracking-sublocation = 'reg-form'
+          tracking-element = ''
+          tracking-gtm-event='ga'
+          tracking-value = ' '></tracking>
+    <form name="signup_bogus_form" method="post"  ng-submit="$event.preventDefault();vm.submit()" ng-init="vm.initialize(true,[&quot;firstName&quot;,&quot;lastName&quot;,&quot;email&quot;],[], null);" novalidate="" action="">
+      <div class="bg-cloud step-title">
+        <h2 class="h2-small">Sign up</h2>
+        <p class="text-left font-gotham-medium">After signing up, you’ll meet your expert freelancer</p>
+      </div>
+      <div class="step-content">
+        <div class="row">
+          <div class="col-xs-12">
+            
+            <div class="form-group"><label class="control-label" for="signup_bogus_form_firstName">First Name</label>            <input type="text" id="signup_bogus_form_firstName" name="signup_bogus_form[firstName]" ng-model="vm.model.firstName" aq-signup-validate="vm.model.firstName" class="form-control" /><div aq-signup-error="firstName" class="error-message"></div>
+  </div><div class="form-group"><label class="control-label" for="signup_bogus_form_lastName">Last Name</label>            <input type="text" id="signup_bogus_form_lastName" name="signup_bogus_form[lastName]" ng-model="vm.model.lastName" aq-signup-validate="vm.model.lastName" class="form-control" /><div aq-signup-error="lastName" class="error-message"></div>
+  </div>            <input type="hidden" id="signup_bogus_form_referrer" name="signup_bogus_form[referrer]" ng-initialize-model="" ng-model="vm.model.referrer" class="form-control" value="https://www.upwork.com/" /><div class="form-group"><label class="control-label" for="signup_bogus_form_email">Email</label>            <input type="text" id="signup_bogus_form_email" name="signup_bogus_form[email]" ng-model="vm.model.email" aq-signup-validate="vm.model.email" class="form-control" /><div aq-signup-error="email" class="error-message"></div>
+  </div>
+    
+          </div>
+        </div>
+      </div>
+      <div class="step-footer text-right bg-cloud">
+        <div class="to-left">
+          <a href="" ng-click="eeStepsCtrl.prevStep()" class="font-gotham-medium">
+            <span class="up-icon icon-prev"></span> Back
+          </a>
+        </div>
+        <div><a href="" class="btn btn-default" ng-click="eeStepsCtrl.loginRedirect($event)" style="margin-right: 20px;">Log In</a></div>
+        <div><div class="text-center m-t-40">
+        <div><button type="submit" id="signup_bogus_form_save" name="signup_bogus_form[save]" ng-class="{&quot;disabled&quot;: vm.btnDisabled()}" class="btn-primary btn-block-xs btn-submit btn btn btn" tracking="" tracking-event="click" tracking-location="early_engagement_test" tracking-sublocation="reg_form_signup" tracking-referrer="{{ referrer }}" tracking-element="button">Sign Up</button></div>
+    </div></div>
+      </div>
+    
+    </form>
+  </div>
+</ee-step>
+      <ee-step name="hpstarter">
+  <div ng-controller="hpStarterProjectCtrl as ctrl">
+    <div class="bg-cloud step-title">
+      <h2 class="h2-small">Starter Projects</h2>
+      <p class="text-left font-gotham-medium">Premium talent is online now, ready to work on these projects</p>
+    </div>
+    <div class="__starter-project step-content">
+      <ul>
+        <li ng-repeat="hourpack in ctrl.hourpacks track by $index">
+          <div class="radio">
+            <label>
+              <input type="radio"
+                ng-model="ctrl.hourpack"
+                name="projectType_radios"
+                ng-checked="ctrl.hourpack.uid == hourpack.uid"
+                ng-value="hourpack">
+              <span class="checkbox-replacement-helper"></span>
+              <strong ng-bind="hourpack.name"></strong>
+              <p ng-if="hourpack.description_starter" ng-bind="hourpack.description_starter" class="text-xshort"></p>
+            </label>
+          </div>
+        </li>
+      </ul>
+      <p ng-if="!(ctrl.hourpack && ctrl.hourpack.uid) && ctrl.clickDisabled" class="text-danger m-t-40 text-center font-gotham-medium">
+        Please select an option
+      </p>
+    </div>
+    <div class="step-footer text-center bg-cloud">
+      <div class="to-left">
+        <a href="" ng-click="ctrl.clearStepInfo();eeStepsCtrl.prevStep()" class="font-gotham-medium"><span class="up-icon icon-prev"></span> Back</a>
+      </div>
+      <div class="to-right" ng-click="ctrl.clickDisabled = true">
+        <button class="btn btn-primary"
+          ng-disabled="!(ctrl.hourpack && ctrl.hourpack.uid)"
+          ng-click="ctrl.saveStepInfo();eeStepsCtrl.nextStep()">Next</button>
+      </div>
+    </div>
+  </div>
+</ee-step>
+      <ee-step name="hpdetails">
+  <div ng-controller="hpProjectDetailsCtrl as ctrl" ng-init="ctrl.images = {&quot;wordpress_opening_consultation&quot;:[&quot;\/\/www.upwork.com\/static\/marketing\/adquiro-webpack\/images\/wordpress-consultation.76f38ea01b8e.png&quot;,&quot;\/\/www.upwork.com\/static\/marketing\/adquiro-webpack\/images\/wordpress-consultation@2x.71f3bbd29271.png&quot;],&quot;wordpress_opening_creation&quot;:[&quot;\/\/www.upwork.com\/static\/marketing\/adquiro-webpack\/images\/wordpress-website-creation.6bdba05b94fd.png&quot;,&quot;\/\/www.upwork.com\/static\/marketing\/adquiro-webpack\/images\/wordpress-website-creation@2x.0de52cae6536.png&quot;],&quot;wordpress_opening_hours&quot;:[&quot;\/\/www.upwork.com\/static\/marketing\/adquiro-webpack\/images\/5-hours-of-wordpress.94175c60466f.png&quot;,&quot;\/\/www.upwork.com\/static\/marketing\/adquiro-webpack\/images\/5-hours-of-wordpress@2x.fdc9c1737136.png&quot;],&quot;smm_consultation&quot;:[&quot;\/\/www.upwork.com\/static\/marketing\/adquiro-webpack\/images\/smm-consultation.ec7946d04703.png&quot;,&quot;\/\/www.upwork.com\/static\/marketing\/adquiro-webpack\/images\/smm-consultation@2x.50739c77d62b.png&quot;],&quot;smm_page&quot;:[&quot;\/\/www.upwork.com\/static\/marketing\/adquiro-webpack\/images\/social-media-page.c52ec9964f50.png&quot;,&quot;\/\/www.upwork.com\/static\/marketing\/adquiro-webpack\/images\/social-media-page@2x.fdb86af41484.png&quot;],&quot;smm_hours&quot;:[&quot;\/\/www.upwork.com\/static\/marketing\/adquiro-webpack\/images\/5-hours-of-smm.f94c35fd0e38.png&quot;,&quot;\/\/www.upwork.com\/static\/marketing\/adquiro-webpack\/images\/5-hours-of-smm@2x.5a5b160205af.png&quot;]}" eo-block="{{ eeStepsCtrl.isBlocked }}">
+      
+<tracking tracking-event = 'impression'
+          tracking-location = 'early_engagement_test'
+          tracking-data = '{&quot;qt&quot;:{&quot;CE2596_HipoReg&quot;:&quot;Treatment3&quot;},&quot;holdout_group&quot;:true,&quot;segments&quot;:[],&quot;demandbase&quot;:{&quot;audience&quot;:&quot;SMB&quot;,&quot;audience_segment&quot;:&quot;Software &amp; Technology&quot;,&quot;country_name&quot;:&quot;Pakistan&quot;,&quot;demandbase_sid&quot;:71114086,&quot;employee_count&quot;:48,&quot;employee_range&quot;:&quot;Very Small&quot;,&quot;industry&quot;:&quot;Technology - IT Services&quot;,&quot;marketing_alias&quot;:&quot;Netsol Connect&quot;,&quot;registry_country&quot;:&quot;Pakistan&quot;,&quot;revenue_range&quot;:&quot;$5M - $10M&quot;,&quot;sub_industry&quot;:&quot;Data &amp; Technical Services&quot;},&quot;skill&quot;:&quot;&#039;{{ ctrl.hourpack.uid }}&#039;&quot;}'
+          tracking-label = ''
+          tracking-olog = '1'
+          tracking-gtm = '1'
+          tracking-referrer = 'desktop_site'
+          tracking-sublocation = 'starter_projects_detail'
+          tracking-element = ''
+          tracking-gtm-event='ga'
+          tracking-value = ' '></tracking>
+    <div class="bg-cloud step-title">
+      <h2 class="h2-small">Project details</h2>
+      <p class="text-left font-gotham-medium" ng-bind="ctrl.hourpack.name + ' - ' + ctrl.hourpack.price"></p>
+    </div>
+    <div class="__project-details step-content">
+      <div class="__image-holder">
+        <img src="{{ ctrl.image_x1 }}">
+        <p ng-bind="ctrl.hourpack.description_project" class="m-b-0"></p>
+      </div>
+      <hr>
+      <h4>What can you expect</h4>
+      <p ng-if="ctrl.hourpack.expect_text" ng-bind="ctrl.hourpack.expect_text" class="m-y-0"></p>
+      <ul ng-if="ctrl.hourpack.expect_items.length > 0" class="m-b-0">
+        <li ng-repeat="expect_item in ctrl.hourpack.expect_items" ng-bind="expect_item"></li>
+      </ul>
+      <h4>What your expert will need</h4>
+      <p ng-if="ctrl.hourpack.need_text" ng-bind="ctrl.hourpack.need_text" class="m-y-0"></p>
+      <ul ng-if="ctrl.hourpack.need_items.length > 0" class="m-b-0">
+        <li ng-repeat="need_item in ctrl.hourpack.need_items" ng-bind="need_item"></li>
+      </ul>
+      <i ng-if="ctrl.hourpack.comment" ng-bind="ctrl.hourpack.comment"></i>
+    </div>
+    <div class="step-footer text-center bg-cloud">
+      <div class="to-left">
+        <a href="" ng-click="eeStepsCtrl.prevStep()" class="font-gotham-medium"><span class="up-icon icon-prev"></span> Back</a>
+      </div>
+      <div class="to-right" ng-click="ctrl.clickDisabled = true">
+        <a href="/ab/starter-projects/{{ ctrl.hourpack.page }}" target="_blank" style="margin-right: 10px" class="font-gotham-medium"
+           olog-trigger
+           olog-event="click"
+           olog-trigger-on="click"
+           olog-location="early_engagement_test"
+           olog-sublocation="starter_projects_detail_learn_more"
+           olog-data='[{"skill": "{{ ctrl.hourpack.uid }}"}]'>Learn More</a>
+        <button class="btn btn-primary" ng-click="ctrl.nextStep();eeStepsCtrl.nextStep()">Next</button>
+      </div>
+    </div>
+  </div>
+</ee-step>
+    </ee-steps>
+  </div>
+</script>
+  
+  
+  
+<section class="__tiles-section text-center
+  ">
+  <div class="container">
+    <h2 class="m-b-80 m-t-80">Work with someone perfect for your team</h2>
+
+    <ul class="__list list-unstyled clearfix m-b-80">
+              <li>
+          <a href="/cat/developers/" class="__item"
+            >
+              <span class="__front">
+                <i class="category-icon category-developers"></i>
+                <span class="__item-title">Web developers</span>
+              </span>
+              <span class="__back">
+                <span>FRONT-END DEVELOPERS<BR/>BACK-END DEVELOPERS<BR/>SOFTWARE PROGRAMMERS</span>
+                <br/>
+                <em>and more...</em>
+              </span>
+          </a>
+        </li>
+              <li>
+          <a href="/cat/mobile-developers/" class="__item"
+            >
+              <span class="__front">
+                <i class="category-icon category-mobile-developers"></i>
+                <span class="__item-title">Mobile developers</span>
+              </span>
+              <span class="__back">
+                <span><SPAN STYLE='TEXT-TRANSFORM:LOWERCASE;'>I</SPAN>OS APP DEVELOPERS<BR/>ANDROID DEVELOPERS<BR/>UI/UX DESIGNERS</span>
+                <br/>
+                <em>and more...</em>
+              </span>
+          </a>
+        </li>
+              <li>
+          <a href="/cat/designers/" class="__item"
+            >
+              <span class="__front">
+                <i class="category-icon category-designers"></i>
+                <span class="__item-title">Designers &amp; Creatives</span>
+              </span>
+              <span class="__back">
+                <span>GRAPHIC DESIGNERS<BR/>UI/UX DESIGNERS<BR/>MOTION GRAPHICS EXPERTS</span>
+                <br/>
+                <em>and more...</em>
+              </span>
+          </a>
+        </li>
+              <li>
+          <a href="/cat/writing/" class="__item"
+            >
+              <span class="__front">
+                <i class="category-icon category-writing"></i>
+                <span class="__item-title">Writers</span>
+              </span>
+              <span class="__back">
+                <span>BLOG WRITERS<BR/>CONTENT WRITERS<BR/>COPYWRITERS</span>
+                <br/>
+                <em>and more...</em>
+              </span>
+          </a>
+        </li>
+              <li>
+          <a href="/cat/administrative-support/" class="__item"
+            >
+              <span class="__front">
+                <i class="category-icon category-administrative-support"></i>
+                <span class="__item-title">Virtual assistants</span>
+              </span>
+              <span class="__back">
+                <span>PERSONAL ASSISTANTS<BR/>TRANSCRIPTIONISTS<BR/>WEB RESEARCHERS</span>
+                <br/>
+                <em>and more...</em>
+              </span>
+          </a>
+        </li>
+              <li>
+          <a href="/cat/customer-service/" class="__item"
+            >
+              <span class="__front">
+                <i class="category-icon category-customer-service"></i>
+                <span class="__item-title">Customer service agents</span>
+              </span>
+              <span class="__back">
+                <span>PHONE SUPPORT SPECIALISTS<BR/>EMAIL SUPPORT EXPERTS<BR/>LIVE CHAT SUPPORT PROS</span>
+                <br/>
+                <em>and more...</em>
+              </span>
+          </a>
+        </li>
+              <li>
+          <a href="/cat/sales-marketing/" class="__item"
+            >
+              <span class="__front">
+                <i class="category-icon category-sales-marketing"></i>
+                <span class="__item-title">Sales &amp; marketing experts</span>
+              </span>
+              <span class="__back">
+                <span>SEO SPECIALISTS<BR/>EMAIL AUTOMATORS<BR/>MARKETING EXPERTS</span>
+                <br/>
+                <em>and more...</em>
+              </span>
+          </a>
+        </li>
+              <li>
+          <a href="/cat/accounting-consulting/" class="__item"
+            >
+              <span class="__front">
+                <i class="category-icon category-accounting-consulting"></i>
+                <span class="__item-title">Accountants &amp; consultants</span>
+              </span>
+              <span class="__back">
+                <span>TAX ACCOUNTANTS<BR/>BOOKKEEPERS<BR/>FINANCIAL MODELERS</span>
+                <br/>
+                <em>and more...</em>
+              </span>
+          </a>
+        </li>
+          </ul>
+
+          <a href="/i/freelancer-categories/" class="btn btn-default btn-block-xs m-b-120"
+        
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'tiles'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'tiles-cta'
+tracking-gtm-event='ga'
+>See All Categories</a>
+      </div>
+</section>
+
+  
+  
+<section class="section-text-blocks  how-it-works bg-cloud p-b-40">
+  <div class="container text-center">
+
+    <h2 class=" m-t-80 m-b-80">How it works</h2>    
+          <div class="row">
+                  <div
+            class="m-b-80                     col-sm-4 col-lg-3 col-lg-offset-0
+                      col-sm-offset-1
+                                          ">
+            <article class="text-block">
+              <header>
+                                  <div class="hiw-icon icon-find"></div>
+                                <hr>              </header>
+                              <h3 class="text-uppercase m-b-40">
+                  FIND
+                </h3>               <p class="text-short">Post a job to tell us about your project. We'll quickly match you with the right freelancers.</p>            </article>
+          </div>
+                            <div
+            class="m-b-80                     col-sm-4 col-lg-3 col-lg-offset-0
+                      col-sm-offset-2
+                                          ">
+            <article class="text-block">
+              <header>
+                                  <div class="hiw-icon icon-hire"></div>
+                                <hr>              </header>
+                              <h3 class="text-uppercase m-b-40">
+                  HIRE
+                </h3>               <p class="text-short">Browse profiles, reviews, and proposals then interview top candidates. Hire a favorite and begin your project.</p>            </article>
+          </div>
+                      <div class="clearfix visible-sm visible-md"></div>
+                            <div
+            class="m-b-80                     col-sm-4 col-lg-3 col-lg-offset-0
+                      col-sm-offset-1
+                                          ">
+            <article class="text-block">
+              <header>
+                                  <div class="hiw-icon icon-work"></div>
+                                <hr>              </header>
+                              <h3 class="text-uppercase m-b-40">
+                  WORK
+                </h3>               <p class="text-short">Use the Upwork platform to chat, share files, and collaborate from your desktop or on the go.</p>            </article>
+          </div>
+                            <div
+            class="m-b-80                     col-sm-4 col-lg-3 col-lg-offset-0
+                      col-sm-offset-2
+                                          ">
+            <article class="text-block">
+              <header>
+                                  <div class="hiw-icon icon-pay"></div>
+                                <hr>              </header>
+                              <h3 class="text-uppercase m-b-40">
+                  PAY
+                </h3>               <p class="text-short">Invoicing and payments happen through Upwork. With Upwork Protection, only pay for work you authorize.</p>            </article>
+          </div>
+                      <div class="clearfix visible-sm visible-md"></div>
+                        </div>
+    
+  </div>
+</section>
+
+  
+<section ng-class="{'expanded': pricing.pricingExpanded == true}"  class="section-pricing m-b-120">
+  <div class="container">
+    <h2 class="m-b-80  m-t-80 text-center">Find the level of service that works for you</h2>  </div>
+  <div scroll-position="scroll" class="container">
+    <div ng-class="{'sticky': pricing.showSticky}" class="default-view">
+      <div class="row price-tiles">
+        <div class="col-sm-12 col-lg-3 pricing-title">
+          <p class="font-gotham-light font-size-22 color-granite">Each option includes access to Upwork's large pool of top-quality freelancers. <br class="visible-md">Choose the level of service you need.</p>
+        </div>
+        <div id="pricing-table" element-position="pricingOffset" class="col-sm-4 col-lg-3 text-center tile-block">
+          <div class="price-tile upwork">
+            <div class="bg-color-white">
+              <h3 class="font-gotham-light">Upwork</h3>
+              <p class="text-short font-gotham-medium color-granite">Professional freelancers and the essentials to find them.</p>
+            </div>
+            <div class="bg-color-cloud">
+
+                                                <a href="/signup/?dest=home"
+                          
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'service-levels-hp-only'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'Sign_Up'
+tracking-gtm-event='ga'
+                     target="_blank" class="btn btn-default btn-block-xsmall m-b-60">Sign Up</a>
+                                          </div>
+          </div>
+
+                    <div ng-class="{'expanded': upworkExpanded == true}" class="expanded-view visible-xs">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3 class="font-gotham-medium text-uppercase">Upwork features</h3>
+                <ul>
+                  <li>
+                    <p class="text-short">Find the right person with efficient search algorithms</p>
+                  </li>
+                  <li>
+                    <p class="text-short">Collaborate and pay easily with built-in features</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="row visible-xs">
+            <div class="col-sm-12">
+              <div class="control">
+                <a ng-click="upworkExpanded = !upworkExpanded" ng-bind="upworkExpanded ? 'View less' : 'View Upwork features'" ng-class="{'collapse': upworkExpanded == true}" ng-cloak="" class="font-gotham-medium expand">View Upwork features</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-sm-4 col-lg-3 text-center tile-block">
+          <div class="price-tile upwork-pro">
+            <div class="bg-color-white">
+              <h3 class="font-gotham-light">Upwork Pro</h3>
+              <p class="text-short font-gotham-medium color-granite">Premium talent, pre-vetted and handpicked for you.</p>
+            </div>
+            <div  class="bg-color-cloud">
+
+                                                <a href="/pro/?channel=hp"
+                          
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'service-levels-hp-only'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'Full_Details'
+tracking-gtm-event='ga'
+                     target="_blank" class="btn btn-default btn-block-xsmall m-b-60">Full Details</a>
+                              
+            </div>
+          </div>
+
+                    <div ng-class="{'expanded': proExpanded == true}" class="expanded-view visible-xs">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3 class="font-gotham-medium text-uppercase">Upwork Pro features</h3>
+                <ul>
+                  <li>
+                    <p class="text-short">Find the right person with efficient search algorithms</p>
+                  </li>
+                  <li>
+                    <p class="text-short">Collaborate and pay easily with built-in features</p>
+                  </li>
+                  <li>
+                    <p class="text-short">Get access to freelancers pre-vetted by Upwork</p>
+                  </li>
+                  <li>
+                    <p class="text-short">Save time with a dedicated account manager</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="row visible-xs">
+            <div class="col-sm-12">
+              <div class="control">
+                <a ng-click="proExpanded = !proExpanded" ng-bind="proExpanded ? 'View less' : 'View Upwork Pro features'" ng-class="{'collapse': proExpanded == true}" ng-cloak="" class="font-gotham-medium expand">View Upwork Pro features</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-sm-4 col-lg-3 text-center tile-block pull-right">
+          <div class="price-tile bg-color-cloud upwork-enterprise">
+            <div class="bg-color-white">
+              <h3 class="font-gotham-light">Upwork Enterprise</h3>
+              <p class="text-short font-gotham-medium color-granite">End-to-end Freelancer Management System.</p>
+            </div>
+            <div class="bg-color-cloud">
+                                                <a href="/enterprise/?channel=hp"
+                          
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'service-levels-hp-only'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'Full_Details'
+tracking-gtm-event='ga'
+                     target="_blank" class="btn btn-default btn-block-xsmall m-b-60">Full Details</a>
+                                          </div>
+          </div>
+
+                    <div ng-class="{'expanded': enterpriseExpanded == true}" class="expanded-view visible-xs">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3 class="font-gotham-medium text-uppercase">Upwork Enterprise features</h3>
+                <ul>
+                  <li>
+                    <p class="text-short">Find the right person with efficient search algorithms</p>
+                  </li>
+                  <li>
+                    <p class="text-short">Collaborate and pay easily with built-in features</p>
+                  </li>
+                  <li>
+                    <p class="text-short">Get access to freelancers pre-vetted by Upwork</p>
+                  </li>
+                  <li>
+                    <p class="text-short">Save time with a dedicated account manager</p>
+                  </li>
+                  <li>
+                    <p class="text-short">Fits your company's needs with tailored onboarding and payment options</p>
+                  </li>
+                  <li>
+                    <p class="text-short">Stay compliant with worker classification services</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="row visible-xs">
+            <div class="col-sm-12">
+              <div class="control">
+                <a ng-click="enterpriseExpanded = !enterpriseExpanded" ng-bind="enterpriseExpanded ? 'View less' : 'View Upwork Enterprise features'" ng-class="{'collapse': enterpriseExpanded == true}" ng-cloak="" class="font-gotham-medium expand">View Upwork Enterprise features</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div id="pricing-row" ng-class="pricing.checkSticky()" ng-style="pricing.topOffset" class="row">
+        <div ng-class="{'transparent': scroll &gt; pricing.firstRowOffset}" class="col-sm-12 col-lg-3 pricing-title"></div>
+        <div class="col-sm-4 col-lg-3 text-center tile-block">
+          <div class="price-tile upwork">
+            <div class="bg-color-white">
+              <h3 class="font-gotham-light">Upwork</h3>
+              <p class="text-short font-gotham-medium color-granite">Professional freelancers and the essentials to find them.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 text-center tile-block">
+          <div class="price-tile upwork-pro">
+            <div class="bg-color-white">
+              <h3 class="font-gotham-light">Upwork Pro</h3>
+              <p class="text-short font-gotham-medium color-granite">Premium talent, pre-vetted and handpicked for you.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 text-center tile-block pull-right">
+          <div class="price-tile upwork-enterprise">
+            <div class="bg-color-white">
+              <h3 class="font-gotham-light">Upwork Enterprise</h3>
+              <p class="text-short font-gotham-medium color-granite">End-to-end Freelancer Management System.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div ng-class="{'expanded': pricing.pricingExpanded == true}" class="expanded-view hidden-xs">
+      <div class="row first-row">
+        <div class="col-sm-12 col-lg-3 tile-block">
+          <div class="check-cell">
+            <p class="text-short font-gotham-medium">Search algorithms to find the right freelancer</p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block">
+          <div class="check-cell checked"></div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block">
+          <div class="check-cell checked"></div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block pull-right">
+          <div class="check-cell checked"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-3 tile-block">
+          <div class="check-cell">
+            <p class="text-short font-gotham-medium">Built-in collaboration and payment features</p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block">
+          <div class="check-cell checked"></div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block">
+          <div class="check-cell checked"></div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block pull-right">
+          <div class="check-cell checked"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-3 tile-block">
+          <div class="check-cell">
+            <p class="text-short font-gotham-medium">Freelancers pre-vetted by Upwork</p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block">
+          <div class="check-cell"></div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block">
+          <div class="check-cell checked"></div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block pull-right">
+          <div class="check-cell checked"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-3 tile-block">
+          <div class="check-cell">
+            <p class="text-short font-gotham-medium">Dedicated account management</p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block">
+          <div class="check-cell"></div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block">
+          <div class="check-cell checked"></div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block pull-right">
+          <div class="check-cell checked"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-3 tile-block">
+          <div class="check-cell long-caption">
+            <p class="text-short font-gotham-medium">Tailored onboarding and payment options</p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block">
+          <div class="check-cell"></div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block">
+          <div class="check-cell"></div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block pull-right">
+          <div class="check-cell checked"></div>
+        </div>
+      </div>
+      <div class="row last-row">
+        <div class="col-sm-12 col-lg-3 tile-block">
+          <div class="check-cell">
+            <p class="text-short font-gotham-medium">Worker classification services</p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block">
+          <div class="check-cell"></div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block">
+          <div class="check-cell"></div>
+        </div>
+        <div class="col-sm-4 col-lg-3 tile-block pull-right">
+          <div class="check-cell checked"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 hidden-xs">
+        <div class="control">
+          <a ng-click="pricing.pricingExpanded = !pricing.pricingExpanded" ng-bind="pricing.pricingExpanded ? 'View less' : 'Compare details'" ng-class="{'collapse': pricing.pricingExpanded == true}" ng-cloak="" class="font-gotham-medium expand pricing">Compare details</a>
+        </div>
+      </div>
+    </div>
+
+      </div>
+</section>
+
+  
+<section class="section-video-testimonial text-with-image clearfix
+         bg-cloud">
+    <div class="carousel" video-testimonial-carousel>
+        <eo-carousel interval="30000" template-url="video-testimonial-carousel-tpl" ng-cloak>
+                            <eo-slide template-url="video-testimonial-carousel-slide-tpl">
+                    <div class="container m-t-80 m-b-80" video-testimonial>
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-push-6" ng-mouseenter="slideScope.showNext = true" ng-mouseleave="slideScope.showNext = false">
+                                
+<div class="video-element  bg-cloud"
+     ng-init="testimonial1592867137 = false;">
+  <figure>
+    <div class="embed-responsive embed-responsive-16by9">
+      <img
+          ng-show="!testimonial1592867137"          class="video-preview" src="//www.upwork.com/static/marketing/adquiro-webpack/images/instapage-thumb.7aaa23f6391a.jpg" srcset="//www.upwork.com/static/marketing/adquiro-webpack/images/instapage-thumb.7aaa23f6391a.jpg 1x, //www.upwork.com/static/marketing/adquiro-webpack/images/instapage-thumb-2x.140ddda491c8.jpg 2x"/>
+              <iframe ng-cloak ng-show="testimonial1592867137"
+                vimeo-autoplay
+                src="https://player.vimeo.com/video/154254456?color=6dda42&api=1&player_id=vimeo-player-1&autoplay=0&title=0&byline=0&portrait=0"
+                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe>
+          </div>
+    <figcaption
+                  ng-show="!testimonial1592867137"
+                    vimeo-autoplay video-src="https://player.vimeo.com/video/154254456?color=6dda42&api=1&player_id=vimeo-player-1&autoplay=0&title=0&byline=0&portrait=0&fullscreen=1">
+      <a class="gallery-overlay gallery-trigger icon-play"
+              
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'video-element'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'element-gallery-trigger'
+tracking-gtm-event='ga'
+         ng-click="testimonial1592867137 = true; $vimeoAutoplayCtrl.trigger($event);"></a>
+      <div class="video-caption text-center">
+        <img src="//www.upwork.com/static/marketing/adquiro-webpack/images/instapage.28d20c027cb3.svg" class="visible-sm visible-xs  visible-lg visible-md">
+        <p class="text-long"></p>
+      </div>
+      <div class="hidden-sm hidden-xs  hidden-lg hidden-md video-caption text-center">
+        <img src="//www.upwork.com/static/marketing/adquiro-webpack/images/instapage.28d20c027cb3.svg">
+      </div>
+    </figcaption>
+  </figure>
+</div>
+                            </div>
+
+                            <div class="col-sm-6 col-sm-pull-6" ng-mouseenter="slideScope.showPrev = true" ng-mouseleave="slideScope.showPrev = false">
+                                <i class="icon-quote"></i>
+                                <p class="m-b-30 font-gotham-light">
+                                    We accomplish more, for a lot less.
+                                </p>
+                                <p class="m-b-40 text-short">
+                                    Tyson Quick
+                                    <br>
+                                    CEO &amp; Founder, Instapage
+                                </p>
+
+                                                                    <a href="/ppc/video-portal/"
+                                            
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'video-testimonial'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'video-testimonial-cta'
+tracking-gtm-event='ga'
+                                       class="btn btn-default bg-white">
+                                        See More Stories
+                                    </a>
+                                                            </div>
+
+                        </div>
+                    </div>
+                </eo-slide>
+                            <eo-slide template-url="video-testimonial-carousel-slide-tpl">
+                    <div class="container m-t-80 m-b-80" video-testimonial>
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-push-6" ng-mouseenter="slideScope.showNext = true" ng-mouseleave="slideScope.showNext = false">
+                                
+<div class="video-element  bg-cloud"
+     ng-init="testimonial1334245952 = false;">
+  <figure>
+    <div class="embed-responsive embed-responsive-16by9">
+      <img
+          ng-show="!testimonial1334245952"          class="video-preview" src="//www.upwork.com/static/marketing/adquiro-webpack/images/flightcar-thumb.b900e73176ef.jpg" srcset="//www.upwork.com/static/marketing/adquiro-webpack/images/flightcar-thumb.b900e73176ef.jpg 1x, //www.upwork.com/static/marketing/adquiro-webpack/images/flightcar-thumb-2x.aee77b8249dd.jpg 2x"/>
+              <iframe ng-cloak ng-show="testimonial1334245952"
+                vimeo-autoplay
+                src="https://player.vimeo.com/video/151552383?color=6dda42&api=1&player_id=vimeo-player-1&autoplay=0&title=0&byline=0&portrait=0"
+                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe>
+          </div>
+    <figcaption
+                  ng-show="!testimonial1334245952"
+                    vimeo-autoplay video-src="https://player.vimeo.com/video/151552383?color=6dda42&api=1&player_id=vimeo-player-1&autoplay=0&title=0&byline=0&portrait=0&fullscreen=1">
+      <a class="gallery-overlay gallery-trigger icon-play"
+              
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'video-element'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'element-gallery-trigger'
+tracking-gtm-event='ga'
+         ng-click="testimonial1334245952 = true; $vimeoAutoplayCtrl.trigger($event);"></a>
+      <div class="video-caption text-center">
+        <img src="//www.upwork.com/static/marketing/adquiro-webpack/images/flightcar.c15b05809faf.svg" class="visible-sm visible-xs  visible-lg visible-md">
+        <p class="text-long"></p>
+      </div>
+      <div class="hidden-sm hidden-xs  hidden-lg hidden-md video-caption text-center">
+        <img src="//www.upwork.com/static/marketing/adquiro-webpack/images/flightcar.c15b05809faf.svg">
+      </div>
+    </figcaption>
+  </figure>
+</div>
+                            </div>
+
+                            <div class="col-sm-6 col-sm-pull-6" ng-mouseenter="slideScope.showPrev = true" ng-mouseleave="slideScope.showPrev = false">
+                                <i class="icon-quote"></i>
+                                <p class="m-b-30 font-gotham-light">
+                                    Our freelancer is gold. She’s the full package.
+                                </p>
+                                <p class="m-b-40 text-short">
+                                    Patrick Cournoyer
+                                    <br>
+                                    VP of People @ Flightcar 
+                                </p>
+
+                                                                    <a href="/ppc/video-portal/"
+                                            
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'video-testimonial'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'video-testimonial-cta'
+tracking-gtm-event='ga'
+                                       class="btn btn-default bg-white">
+                                        See More Stories
+                                    </a>
+                                                            </div>
+
+                        </div>
+                    </div>
+                </eo-slide>
+                            <eo-slide template-url="video-testimonial-carousel-slide-tpl">
+                    <div class="container m-t-80 m-b-80" video-testimonial>
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-push-6" ng-mouseenter="slideScope.showNext = true" ng-mouseleave="slideScope.showNext = false">
+                                
+<div class="video-element  bg-cloud"
+     ng-init="testimonial1963843291 = false;">
+  <figure>
+    <div class="embed-responsive embed-responsive-16by9">
+      <img
+          ng-show="!testimonial1963843291"          class="video-preview" src="//www.upwork.com/static/marketing/adquiro-webpack/images/chess-thumb.e0cc6e3962fb.jpg" srcset="//www.upwork.com/static/marketing/adquiro-webpack/images/chess-thumb.e0cc6e3962fb.jpg 1x, //www.upwork.com/static/marketing/adquiro-webpack/images/chess-thumb-2x.f43c3bb0e1b7.jpg 2x"/>
+              <iframe ng-cloak ng-show="testimonial1963843291"
+                vimeo-autoplay
+                src="https://player.vimeo.com/video/151552381?color=6dda42&api=1&player_id=vimeo-player-1&autoplay=0&title=0&byline=0&portrait=0"
+                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe>
+          </div>
+    <figcaption
+                  ng-show="!testimonial1963843291"
+                    vimeo-autoplay video-src="https://player.vimeo.com/video/151552381?color=6dda42&api=1&player_id=vimeo-player-1&autoplay=0&title=0&byline=0&portrait=0&fullscreen=1">
+      <a class="gallery-overlay gallery-trigger icon-play"
+              
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'video-element'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'element-gallery-trigger'
+tracking-gtm-event='ga'
+         ng-click="testimonial1963843291 = true; $vimeoAutoplayCtrl.trigger($event);"></a>
+      <div class="video-caption text-center">
+        <img src="//www.upwork.com/static/marketing/adquiro-webpack/images/chess.72fc4c67270e.svg" class="visible-sm visible-xs  visible-lg visible-md">
+        <p class="text-long"></p>
+      </div>
+      <div class="hidden-sm hidden-xs  hidden-lg hidden-md video-caption text-center">
+        <img src="//www.upwork.com/static/marketing/adquiro-webpack/images/chess.72fc4c67270e.svg">
+      </div>
+    </figcaption>
+  </figure>
+</div>
+                            </div>
+
+                            <div class="col-sm-6 col-sm-pull-6" ng-mouseenter="slideScope.showPrev = true" ng-mouseleave="slideScope.showPrev = false">
+                                <i class="icon-quote"></i>
+                                <p class="m-b-30 font-gotham-light">
+                                    Our Upwork developers are ahead of the curve.
+                                </p>
+                                <p class="m-b-40 text-short">
+                                    Erik Allebest
+                                    <br>
+                                    CEO &amp; Founder, Chess.com
+                                </p>
+
+                                                                    <a href="/ppc/video-portal/"
+                                            
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'video-testimonial'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'video-testimonial-cta'
+tracking-gtm-event='ga'
+                                       class="btn btn-default bg-white">
+                                        See More Stories
+                                    </a>
+                                                            </div>
+
+                        </div>
+                    </div>
+                </eo-slide>
+                    </eo-carousel>
+    </div>
+</section>
+
+
+<script type="text/ng-template" id="video-testimonial-carousel-tpl">
+    <div class="carousel" ng-swipe-right="prev()" ng-swipe-left="next()">
+        <div class="carousel-inner" video-testimonial-hover ng-transclude></div>
+        <a class="left carousel-control" video-testimonial-pause ng-click="prev()" ng-mouseenter="showPrev = true" ng-mouseleave="showPrev = false" ng-show="slides.length > 1">
+            <span class="up-icon icon-prev" ng-show="showPrev"></span>
+        </a>
+        <a class="right carousel-control" video-testimonial-pause ng-click="next()" ng-mouseenter="showNext = true" ng-mouseleave="showNext = false" ng-show="slides.length > 1">
+            <span class="up-icon icon-next" ng-show="showNext"></span>
+        </a>
+    </div>
+</script>
+
+<script type="text/ng-template" id="video-testimonial-carousel-slide-tpl">
+    <div ng-class="{'active': leaving || (active && !entering) }" class="item" ng-transclude></div>
+</script>
+
+
+  
+<section class="section-logo-bar bg-ash">
+  <div class="container">
+
+    <h4 class="text-uppercase hidden-xs">Top businesses hiring on upwork</h4>
+    <div class="logobar m-b-60">
+    </div>
+  </div>
+</section>
+
+  
+<section ng-init="visibleCount = 10;"
+  class="__links-list-section
+    __mod-seo-skills ">
+  <div class="container">
+    <div class="row">
+      <h3 class="m-t-80 m-b-20 col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0 text-uppercase">
+        Browse Top Skills
+        <hr class="m-b-30">
+      </h3>
+      <ul class="col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0" ng-cloak>
+                  <li ng-class="{'__hide': 1 > visibleCount}">
+            <a             href="/hire/android-developers/">Android Developers</a>
+          </li>
+                  <li ng-class="{'__hide': 2 > visibleCount}">
+            <a             href="/hire/angularjs-developers/">AngularJS Developers</a>
+          </li>
+                  <li ng-class="{'__hide': 3 > visibleCount}">
+            <a             href="/hire/bookkeepers/">Bookkeepers</a>
+          </li>
+                  <li ng-class="{'__hide': 4 > visibleCount}">
+            <a             href="/hire/c-sharp-developers/">C# Developers</a>
+          </li>
+                  <li ng-class="{'__hide': 5 > visibleCount}">
+            <a             href="/hire/content-writers/">Content Writers</a>
+          </li>
+                  <li ng-class="{'__hide': 6 > visibleCount}">
+            <a             href="/hire/copywriters/">Copywriters</a>
+          </li>
+                  <li ng-class="{'__hide': 7 > visibleCount}">
+            <a             href="/hire/customer-service-agents/">Customer Service Representatives</a>
+          </li>
+                  <li ng-class="{'__hide': 8 > visibleCount}">
+            <a             href="/hire/data-entry-specialists/">Data Entry Specialists</a>
+          </li>
+                  <li ng-class="{'__hide': 9 > visibleCount}">
+            <a             href="/hire/email-marketing-consultants/">Email Marketing Consultants</a>
+          </li>
+                  <li ng-class="{'__hide': 10 > visibleCount}">
+            <a             href="/hire/microsoft-excel-experts/">Excel Experts</a>
+          </li>
+                  <li ng-class="{'__hide': 11 > visibleCount}">
+            <a             href="/hire/facebook-marketing-freelancers/">Facebook Marketers</a>
+          </li>
+                  <li ng-class="{'__hide': 12 > visibleCount}">
+            <a             href="/hire/graphic-designers/">Graphic Designers</a>
+          </li>
+                  <li ng-class="{'__hide': 13 > visibleCount}">
+            <a             href="/hire/ios-developers/">iOS Developers</a>
+          </li>
+                  <li ng-class="{'__hide': 14 > visibleCount}">
+            <a             href="/hire/javascript-developers/">JavaScript Developers</a>
+          </li>
+                  <li ng-class="{'__hide': 15 > visibleCount}">
+            <a             href="/hire/jquery-developers/">jQuery Developers</a>
+          </li>
+                  <li ng-class="{'__hide': 16 > visibleCount}">
+            <a             href="/hire/mobile-app-development-freelancers/">Mobile App Developers</a>
+          </li>
+                  <li ng-class="{'__hide': 17 > visibleCount}">
+            <a             href="/hire/objective-c-developers/">Objective-C Developers</a>
+          </li>
+                  <li ng-class="{'__hide': 18 > visibleCount}">
+            <a             href="/hire/php-developers/">PHP Developers</a>
+          </li>
+                  <li ng-class="{'__hide': 19 > visibleCount}">
+            <a             href="/hire/python-developers/">Python Developers</a>
+          </li>
+                  <li ng-class="{'__hide': 20 > visibleCount}">
+            <a             href="/hire/sales-consultants/">Sales Consultants</a>
+          </li>
+                  <li ng-class="{'__hide': 21 > visibleCount}">
+            <a             href="/hire/seo-experts/">SEO Experts</a>
+          </li>
+                  <li ng-class="{'__hide': 22 > visibleCount}">
+            <a             href="/hire/social-media-consultants/">Social Media Consultants</a>
+          </li>
+                  <li ng-class="{'__hide': 23 > visibleCount}">
+            <a             href="/hire/swift-freelancers/">Swift Developers</a>
+          </li>
+                  <li ng-class="{'__hide': 24 > visibleCount}">
+            <a             href="/hire/technical-writers/">Technical Writers</a>
+          </li>
+                  <li ng-class="{'__hide': 25 > visibleCount}">
+            <a             href="/hire/ui-designers/">UI Designers</a>
+          </li>
+                  <li ng-class="{'__hide': 26 > visibleCount}">
+            <a             href="/hire/ux-designers/">UX Designers</a>
+          </li>
+                  <li ng-class="{'__hide': 27 > visibleCount}">
+            <a             href="/hire/virtual-assistants/">Virtual Assistants</a>
+          </li>
+                  <li ng-class="{'__hide': 28 > visibleCount}">
+            <a             href="/hire/web-designers/">Web Designers</a>
+          </li>
+                  <li ng-class="{'__hide': 29 > visibleCount}">
+            <a             href="/hire/wordpress-developers/">Wordpress Developers</a>
+          </li>
+                  <li ng-class="{'__hide': 30 > visibleCount}">
+            <a             href="/hire/writers/">Writers</a>
+          </li>
+                <li class="__more"><a ng-click="visibleCount = visibleCount + 10;" href="#">View More</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+  
+<section class="text-center bg-grass">
+  <div class="container">
+    <div class="row">
+      <div class=" col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+        <h2 class=" m-t-80 m-b-40">Build your online team</h2>
+                          <a 
+tracking
+tracking-event = 'click'
+tracking-location = 'vs_core_homepage'
+tracking-sublocation = 'payoff'
+tracking-data = 'null'
+tracking-label = ''
+tracking-value = ''
+tracking-olog = '1'
+tracking-gtm = '1'
+tracking-referrer = 'desktop_site'
+tracking-element = 'payoff-cta'
+tracking-gtm-event='ga'
+                  href="/signup/?dest=home"
+                                         class="btn btn-white-border btn-block-xs m-b-120">
+            Get Started
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  
+            </main>
+
+              
+<section class="page-footer p-t-60 p-b-0">
+  <div class="container">
+    <div class="footer-logos">
+      <div class="row">
+        <div class="col-sm-offset-2 col-sm-2 col-md-offset-1 col-md-3 m-b-40">
+          <img src="//www.upwork.com/static/marketing/adquiro-webpack/images/upwork-logo-footer.44e18bb59b0e.svg" class="img-responsive p-logo" alt="">
+          <p>
+            Top-skilled freelancers and the essentials
+            <br class="visible-lg">
+            to find and work with them.
+          </p>
+          <a href="/" class="font-gotham-medium">Learn more</a>
+        </div>
+        <div class="col-sm-offset-2 col-sm-2 col-md-offset-1 col-md-3 m-b-40">
+          <img src="//www.upwork.com/static/marketing/adquiro-webpack/images/upwork-pro-logo-footer.b6e324dd858b.svg" class="img-responsive p-logo" alt="">
+          <p>
+            Personalized assistance to help you find
+            <br class="visible-lg">
+            premium, pre-vetted talent.
+          </p>
+          <a href="/pro/?channel=footer" class="font-gotham-medium">Learn more</a>
+        </div>
+        <div class="col-sm-offset-2 col-sm-2 col-md-offset-1 col-md-3 m-b-40">
+          <img src="//www.upwork.com/static/marketing/adquiro-webpack/images/upwork-ent-logo-footer.36e850862332.svg" class="img-responsive p-logo" alt="">
+          <p>
+            An end-to-end technology and service
+            solution customized to fit your company.
+          </p>
+          <a href="/enterprise/" class="font-gotham-medium">Learn more</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-sitemap">
+      <div ui-accordion="" ui-accordion-footer="" class="row">
+        <div class="col-sm-offset-1 col-sm-3">
+          <div ui-accordion-item="" class="item">
+            <h4 class="text-uppercase m-b-40 title">
+              <a ui-accordion-item-toggle="">Company Info</a>
+            </h4>
+            <ul class="list-unstyled text-short content">
+              <li><a href="/about/">About Us</a></li>
+              <li><a href="/i/stories/">Customer Stories</a></li>
+              <li><a href="/press/">Press</a></li>
+              <li><a href="/about/careers/">Careers</a></li>
+              <li><a href="/blog/">Upwork Blog</a></li>
+              <li><a href="/legal/terms/">Terms of Service</a></li>
+              <li><a href="/legal/privacy/">Privacy Policy</a></li>
+              <li><a href="/i/trust-safety-mission/">Trust & Safety</a></li>
+              <li><a target="_blank" href="/hiring/">Hiring Headquarters</a></li>
+              <li><a target="_blank" href="/press/quarterly-skills-index/">Online Work Report</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-offset-1 col-sm-3">
+          <div ui-accordion-item="" class="item">
+            <h4 class="text-uppercase m-b-40 title">
+              <a ui-accordion-item-toggle="">Additional Services</a>
+            </h4>
+            <ul class="list-unstyled m-b-40 text-short content">
+              <li><a href="/pro/">Upwork Pro</a></li>
+              <li><a target="_blank" href="/enterprise/">Enterprise Solutions</a></li>
+              <li><a target="_blank" href="/s/work-without-limits/">Enterprise Summit</a></li>
+              <li><a target="_blank" href="/i/business-resources/">Local Business Resources</a></li>
+            </ul>
+          </div>
+          <div ui-accordion-item="" class="item">
+            <h4 class="text-uppercase m-b-40 title"><a ui-accordion-item-toggle="">Connect with us</a></h4>
+            <ul class="list-unstyled text-short content">
+              <li><a href="https://support.upwork.com/home">Contact & Support</a></li>
+              <li><a href="https://developers.upwork.com/">API Center</a></li>
+              <li><a href="/i/mobile/">Mobile App</a></li>
+            </ul>
+          </div>
+        </div>
+        <div ui-accordion-item="" class="col-sm-offset-1 col-sm-3">
+          <div ui-accordion-item="" class="item">
+            <h4 class="text-uppercase m-b-40 title">
+              <a ui-accordion-item-toggle="">Browse</a>
+            </h4>
+            <ul class="list-unstyled text-short content">
+              <li><a href="/i/freelancer-categories/">Freelancers by Skill</a></li>
+              <li><a href="/local/united-states/">Freelancers in USA</a></li>
+              <li><a href="/local/united-kingdom/">Freelancers in UK</a></li>
+              <li><a href="/local/canada/">Freelancers in Canada</a></li>
+              <li><a href="/local/australia/">Freelancers in Australia</a></li>
+              <li><a href="/i/job-categories/">Find Jobs</a></li>
+              <li><a href="/i/hiring-guides/">Hiring Resources</a></li>
+              <li><a href="/freelance-jobs/united-states/">Jobs in USA</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-social">
+      <hr class="hidden-xs">
+      <div ui-accordion="" ui-accordion-footer="" class="row m-y-40">
+        <div class="col-sm-7 social-links">
+          <div ui-accordion-item="" class="item">
+            <h3 class="text-short pull-left title">
+              <a ui-accordion-item-toggle="">Follow us</a>
+            </h3>
+            <ul class="pull-left list-inline content">
+              <li class="gplus"><a title="Add Upwork to Google+ circles" target="_blank" href="https://plus.google.com/107040851368295259701"></a></li>
+              <li class="facebook"><a title="Visit Upwork on Facebook" target="_blank" href="https://www.facebook.com/upwork"></a></li>
+              <li class="linkedin"><a title="Read Upwork company news on LinkedIn" target="_blank" href="https://www.linkedin.com/company/upwork"></a></li>
+              <li class="twitter"><a title="Follow @Upwork on Twitter" target="_blank" href="https://twitter.com/Upwork"></a></li>
+              <li class="youtube"><a title="Watch Upwork videos on YouTube" target="_blank" href="https://www.youtube.com/channel/UCvxGFOnwUBDHHcxuPqhe4CQ"></a></li>
+              <li class="instagram"><a title="Follow Upwork on Instagram" target="_blank" href="https://www.instagram.com/upworkinc/"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-5 apps-links text-right">
+          <div ui-accordion-item="" class="item">
+            <h3 class="text-short"><span>Download</span> mobile app</h3>
+            <ul class="pull-right list-inline">
+              <li class="apple"><a title="Download Upwork app from Itunes" target="_blank" href="https://itunes.apple.com/us/app/upwork-messenger/id944344799?mt=8"></a></li>
+              <li class="android"><a title="Download Upwork app from Google Play" target="_blank" href="https://play.google.com/store/apps/details?id=com.upwork.android&amp;hl=en"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="hidden-xs">
+    </div>
+    <div class="page-footer">
+      <div class="container">
+        <p class="text-center">&copy; 2015 - 2017 Upwork Global Inc.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+            </div></div>
+              <script defer="defer" src="//www.upwork.com/static/marketing/adquiro-webpack/base.5758f545549c.js"></script>
+    
+  <script defer="defer" src="//www.upwork.com/static/marketing/adquiro-webpack/homepage.20eda62d0303.js"></script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var inputs = document.body.querySelectorAll('form[action*="/o/profiles/browse"] input[type=text]');
+            for (var i = 0; i < inputs.length; ++i) {
+                inputs.item(i).addEventListener('focus', function() {
+                    window['optimizely'] = window['optimizely'] || [];
+                    window['optimizely'].push(["activate", 312136165]);
+                }, false);
+            }
+        });
+    </script>
+    
+            <!-- SessionCam Client Integration v6.0 -->
+    <script type="text/javascript">
+        var sessioncamConfiguration = new Object();
+        sessioncamConfiguration.SessionCamPath = 'visitor';
+        sessioncamConfiguration.SessionCamPageName = 'home';
+        
+        //<![CDATA[
+        var scRec=document.createElement('SCRIPT');
+        scRec.type='text/javascript';
+        scRec.src="//d2oh4tlt9mrke9.cloudfront.net/Record/js/sessioncam.recorder.js";
+        document.getElementsByTagName('head')[0].appendChild(scRec);
+        //]]>
+    </script>
+    <!-- End SessionCam -->
+                                
+                    <script>
+                dataLayer = [{"site":{"application":"adquiro","version":"324b8cd","environment":"prod"},"user":{"visitor_id":"103.84.148.12.1503511927916148","recognized":false,"internal":false,"loggedIn":false},"br_data.ptype":"homepage"}];
+            </script>
+        
+                    <!-- Google Tag Manager -->
+            <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K7572X&amp;site.application=adquiro&amp;site.version=324b8cd&amp;site.environment=prod&amp;user.visitor_id=103.84.148.12.1503511927916148&amp;user.recognized=&amp;user.internal=&amp;user.loggedIn=&amp;br_data.ptype=homepage" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K7572X');</script>
+            <!-- End Google Tag Manager -->
+                <script type="text/javascript">
+    (function(){
+        window._pxAppId = "PXSs13U803";        var p = document.getElementsByTagName('script')[0],
+        s = document.createElement('script');
+        s.async = 1;
+        s.src = '//client.perimeterx.net/PXSs13U803/main.min.js';
+        p.parentNode.insertBefore(s,p);
+    }());
+</script>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8e23a381b9","applicationID":"41848072","transactionName":"NVxRMRBYVhBXUhBQDAwWcgYWUFcNGUcNSgoWVkE6ClZVBg==","queueTime":0,"applicationTime":992,"atts":"GRtSR1hCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

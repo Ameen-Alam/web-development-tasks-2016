@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/boot.css" type="text/css">
+    
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyACqrsKQP6UG1TFoIFhXL06ub0hGWfbsrY",
+    authDomain: "sample-a9aaf.firebaseapp.com",
+    databaseURL: "https://sample-a9aaf.firebaseio.com",
+    projectId: "sample-a9aaf",
+    storageBucket: "sample-a9aaf.appspot.com",
+    messagingSenderId: "207859447681"
+  };
+  firebase.initializeApp(config);
+</script>
+    <title>HomeToSheikh</title>
+    <link rel="stylesheet" href="custom.css" type="text/css">
+    <!-- Bootstrap CSS -->
+</head>
+
+<body>
+    <div class="container-fluid fixed-top" style="background:rgb(0 , 123, 225)">
+        <div class="container">
+            
+            <nav class="navbar navbar-expand-lg navbar-dark">
+  <a class="navbar-brand text-white" href="#">Dany Bills</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <form class="form-inline my-2 my-lg-0 mr-auto">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn my-2 my-sm-0 button" type="submit">Search</button>
+    </form>
+    <ul class="navbar-nav ">
+      <li class="nav-item active">
+        <a class="nav-link text-white" href="home.html" style="font-weight:bold;" >Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="posts.html">Feeds</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="https://www.facebook.com/profile.php?id=100008199347637" target= "_blank" class="text-white">+92-(304)-386-6719</a>
+      </li>
+      </li>
+      <li class="nav-item">
+        <button type="button" onclick="signOut();" id="oonclick" class="btn btn-primary" style="cursor: pointer;">Logout</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+            
+            
+            
+            <!--<div class="row">
+                <input type="text" class="col-sm-4" placeholder="Search.....">
+                <div id="name" class="btn btn-primary col-sm-2"><a href="home.html" class="text-white active">HOME</a></div>    
+                <div id="home" class="btn btn-primary col-sm-2"><a href="posts.html" class="text-white active">POST</a></div>
+                <div id="liceChat" class="btn btn-primary col-sm-1">LIVE CHAT</div>
+                <div id="notification" class="btn btn-primary col-sm-2"><a href="https://www.facebook.com/profile.php?id=100008199347637" target= "_blank" class="text-white">+92-(304)-386-6719 </a> </div>
+                <div id="logout" class="btn btn-primary col-sm-1"><a href="login.html" class="text-white">LOG OUT</a></div>
+            </div>-->
+        </div><!--container-->
+    </div><!--container-fluid-->
+    <!---->
+
+    <div class="container box2" style="margin-top: 60px ; ">
+
+    <h2 style="text-align:center; text-shadow:2px 1px 1px rgb(0 , 123 , 225)" class="text-primary" id="nameRow"></h2>
+    <h5 class="text-muted" style="text-align:center" id="emailRow"></h5>
+    </div>
+
+    <div class="container box1" style="margin-top: 10px;margin-bottom:  52px;">
+        <div class="row">
+            <div class="col-sm-4 boxg"  >
+                <div class="h3 text-white" style="border-radius:10px;padding-left:20px;background:rgb(0 , 123 , 225); margin-top:10px;">Intro...</div>
+                <div class="">WEB DesiG-N iS ThE FashiO-N oF MInE....</div> <hr />   
+                <div class=""><a href="">
+                  <img style="border-radius: 100%; width:160px; height:140px;" class="img-responsive" src="images/logo.jpg" alt="">
+                  <img src="images/google1.png" style="border-radius: 100%; width:160px; height:140px;" alt="">  
+                </a></div>
+                <div class="">Studies app development at Mass Training....</div>    
+                <div class="">Studies Softwrae Engineering at University Of karachi....</div>    
+                <div class="">Went to National govt College</div>    
+                <div class="">Went to Falcon House Grammer School campus-5 </div>    
+            </div><!--col-sm-4-->
+            <div class="col-sm-7 boxg" >
+                <div class="h3 text-white" style="background:rgb(0 , 123 , 225);border-radius:10px; text-align:center; margin-top:10px;"> POST DUA...</div>
+               <hr />
+                <div class="box">
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="btn btn-primary col-sm-3" style="margin-right:20px;"><a class="text-white" href="posts.html">All Post</a></div>
+                        <div class="btn btn-primary col-sm-3" style="margin-right:20px;">Photo/ Video </div>
+                        <div class="btn btn-primary col-sm-3" style="margin-right:20px;">Live Chat</div>
+                        <div class="col-sm-1"></div>
+                    </div> <!--row-->
+                    <br />
+                    <div class="box">
+                        
+
+                        <!--<form>-->
+  <div class="form-group">
+    <label for="exampleFormControlInput1">What's on your mind... </label>
+    <input type="email" class="form-control" id="sender" placeholder="Name">
+  <!--</div>
+  <div class="form-group">-->
+    <!--<label for="exampleFormControlTextarea1">Example textarea</label>-->
+    <textarea class="form-control" id="commentBox" placeholder="Enter your post..." rows="3"></textarea>
+   <button type="submit" class="btn btn-primary" onclick="submit();">Post</button>
+    <small id="passwordHelpBlock" class="form-text text-muted">
+<h3> Enter your Dua in Comments Box below ! 
+<small>and let all muslim brothers and sisters over the world pray for you.</small></h3>
+Hardships, problems, tests and challenges are part of every person’s life and to deal with this Allah has provided us a very strong device, the device of dua. Allah has also provided us the chance to dramatically increase the effectiveness of our own Duas by encouraging us to make duas for other brothers and sisters in Islam.
+</small>
+  </div>
+<!--</form>-->
+
+    
+
+
+
+                    </div>
+                <!--     <div class="text-warning">
+                        <span style="font-weight: bold;">Post Your Dua</span>
+                        <input type="text" placeholder="What's your Name'" id="sender">
+                        <input type="text" placeholder="Post your dua" id="commentBox">
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="justify-content-end">
+                        <button  class="button btn btn-primary" type="post" onclick="submit();">POSt</button>
+                    </div>-->
+                </div><!--box-->   
+            </div><!--col-sm-7-->
+            <div class="col-sm-1"></div><!--col-sm-1-->
+        </div>
+    </div>
+<!--fotter-->
+<div>
+<marquee class="fixed-bottom" behavior="fixe" direction="left" onmouseover="this.stop()" onmouseout="this.start()" > <div > Their is S.M. Ameen Alam 18 years old beloved son of middle class family from Karachi that has passed inter pre-engineering and want to continue it. presently learning as web designer & web apps development which is associate with my childhood when I was 10 years old my Mother advised me to join software-engineering Insha’Allah, it will become good luck for you so, my respected parents supported and allowed me first time learning as Android / IOS / Web Apps development at 'Mass Training' really that was good opportunity for my career advancement. There I final decided my vision that was not possible for me after way of success life has been providing many chances. I hope your organization will open new doors towards my vision and I will definitely assist for the World as Pakistani by Rehmat-e-RabbulAlameen... </div> </marquee>
+<!---->
+</div>
+
+
+    <!-- HTML Cooding end -->
+    <!-- JS  -->
+    <script src="home.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="lib/jquery.js"></script>
+    <script src="lib/pooper.js"></script>
+    <script src="lib/boot.js"></script>
+    <!-- End Body-->
+</body>
+</html>

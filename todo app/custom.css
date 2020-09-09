@@ -1,0 +1,78 @@
+
+body{
+    background: #edf0f1;
+}
+/*.m-t20{*/
+    /*margin-top:20px;*/
+/*}*/
+/*.m-r5{*/
+
+    /*margin-right: 5px;*/
+/*}*/
+
+.btn-sty{
+
+    border-radius: 7px !important;
+}
+
+/*.m-t10{*/
+    /*margin-top:10px;*/
+/*}*/
+
+footer{
+    background: #edf0f1!important;
+    text-align: center;
+    padding: 15px;
+    margin-top:10%;
+}
+#p1{
+    color: #fff;
+}
+.cursor{
+    cursor: pointer;
+}
+.list-group-item-info {
+    /*color: #fff !important;*/
+    background: #fff!important;
+}
+
+.mheader{
+       background: #25b99a!important;
+    color: #fff !important;
+}
+.modal-body input::-webkit-input-placeholder{
+    color: rgba(256,256,256,0.75);
+}
+.modal-body input::-moz-input-placeholder{
+    color: rgba(256,256,256,0.75);
+}
+.modal-body input::-o-input-placeholder{
+    color: rgba(256,256,256,0.75);
+}
+.modal-body input::-ms-input-placeholder{
+    color: rgba(256,256,256,0.75);
+}
+
+.btnclose{
+    color: #fff;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 10px 50px;
+    border-color:#fff;
+    border-style: hidden;
+    color: #000220;
+}
+marquee{
+    border-radius: 5px;
+    cursor: none;
+    /*clear: both;*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 150%;
+    color: #fff;
+    /*color: rgb(360%,300% , 260%);*/
+    background: #25b99a;
+    
+    /*background-color:rgb(10%,10% , 10%);*/
+}
